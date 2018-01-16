@@ -34,7 +34,7 @@ export default class Login extends React.Component {
 					<Col md={4}></Col>
 					<Col md={4}>
 						<section className="login-form">
-							<form method="post" action="#" role="login">
+							<div role="login">
 
 								<h1>Seniors</h1>
 
@@ -62,10 +62,7 @@ export default class Login extends React.Component {
 
 								<div className="pwstrength_viewport_progress"></div>
 
-								{this.state.email}
-								{this.state.password}
-
-								<Button type="submit" name="go" className="btn btn-lg btn-primary btn-block">
+								<Button type="submit" name="go" className="btn btn-lg btn-primary btn-block" onClick={()=>this.props.login()}>
 									Sign in
 								</Button>
 								
@@ -73,12 +70,12 @@ export default class Login extends React.Component {
 									<a onClick={()=>this.props.history.replace('/')}>Create account</a> or <a onClick={()=>this.props.history.replace('/')}>reset password</a>
 								</div>
 
-							</form>
+							</div>
 
 							<div className="form-links">
 								<a onClick={()=>this.props.history.replace('/')}>www.seniors.com</a>
 							</div>
-							
+
 						</section>  
 					</Col>
 					<Col md={4}></Col>

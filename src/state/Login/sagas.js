@@ -1,49 +1,30 @@
 import { call, put, takeLatest } from "redux-saga/effects";
-import * as homeApi from "../../api/home.api";
+import { delay } from 'redux-saga';
+import * as userApi from "../../api/user.api";
 import * as actionTypes from "./actionTypes";
 import * as actions from "./actionCreators";
-import appActions from "../app/app.actions";
 
 /**
  * SAGAS
  */
-/*
-export function* getKeyValueSaga({ payload: key }) {
-  yield put(appActions.appIsWaiting(true));
-  yield put(actions.startGetKeyValue());
-  try {
-    const { value } = yield call(homeApi.getKeyValue, key);
-    yield put(actions.resolveGetKeyValue(key, value));
-  } catch (error) {
-    yield put(actions.rejectGetKeyValue(error.message));
-  } finally {
-    yield put(appActions.appIsWaiting(false));
-  }
+
+export function* loginSaga(action){
+	console.log("aa",action);
+	yield call(delay,1000);
+	yield console.log("loginSaga", action);
+	
+	try{
+		const data = yield call(userApi.login, {email:"juan", password: "pass"} );
+		yield console.log(data);
+	} catch (error) {
+		yield console.log("error");
+	}
 }
 
-export function* updateKeyValueSaga({ payload: { key, value } }) {
-  yield put(appActions.appIsWaiting(true));
-  yield put(actions.startUpdateKeyValue());
-  try {
-    yield call(homeApi.updateKeyValue, value, key);
-    yield put(actions.resolveUpdateKeyValue(key, value));
-  } catch (error) {
-    yield put(actions.rejectUpdateKeyValue(error.message));
-  } finally {
-    yield put(appActions.appIsWaiting(false));
-  }
-}
-*/
 /**
  * WATCHERS
  */
 
-/*
-export function* watchGetKeyValue() {
-  yield takeLatest(actionTypes.GET_KEY_VALUE, getKeyValueSaga);
+export function* watchLogin(){
+	yield takeLatest('SUBMIT_LOGIN', loginSaga);
 }
-
-export function* watchUpdateKeyValueSaga() {
-  yield takeLatest(actionTypes.UPDATE_KEY_VALUE, updateKeyValueSaga);
-}
-*/
