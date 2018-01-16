@@ -10,6 +10,6 @@ const appReducer = combineReducers({
 
 const RootReducer = (state, action) => {
 	return appReducer( action.type === "LOGOUT" ? undefined : state, action);
-}
+};
 
 export default RootReducer;

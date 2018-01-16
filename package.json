@@ -15,6 +15,10 @@
     "reselect": "^3.0.1"
   },
   "devDependencies": {
+    "eslint": "^4.15.0",
+    "eslint-config-rallycoding": "^3.2.0",
+    "eslint-plugin-react": "^7.5.1",
+    "eslint-rallycoding": "^1.2.0",
     "husky": "^0.14.3",
     "react-scripts": "1.1.0",
     "redux-devtools": "^3.4.1"
@@ -23,6 +27,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepush": "npm test"
   }
 }

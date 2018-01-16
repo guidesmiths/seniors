@@ -1,6 +1,5 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import createSagaMiddleware from 'redux-saga';
-import { composeWithDevTools } from "redux-devtools";
 
 import { myConfig } from './config/environment';
 
@@ -13,13 +12,13 @@ const isDevToolEnabled = () => myConfig.enableDevTools;
 
 export default function configireStore() {
 
-  let store = createStore(
-    rootReducer,
-    initialState,
-    isDevToolEnabled ? compose(applyMiddleware(sagaMiddleware)) : applyMiddleware(sagaMiddleware)
-  );
+	let store = createStore(
+		rootReducer,
+		initialState,
+		isDevToolEnabled ? compose(applyMiddleware(sagaMiddleware)) : applyMiddleware(sagaMiddleware)
+	);
 
-  sagaMiddleware.run(rootSagas);
+	sagaMiddleware.run(rootSagas);
 
-  return store;
+	return store;
 }

@@ -4,17 +4,19 @@ import "./blog.css";
 
 
 export default class Blog extends React.Component {
-  static PropTypes = {}
 
-  constructor(props){
-    super(props);
-    this.state = {}
-  }
+	constructor(props){
+		super(props);
+		this.state = {};
+	}
 
-  render(){
-    return(
-    	<div>Blog</div>
-    )
-  }
+	render(){
+		return(
+			<div>Blog</div>
+		);
+	}
 
 }
+
+Blog.propTypes = {
+};
