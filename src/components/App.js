@@ -1,8 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 
-/* import components */
-import Home from './Views/Home/home.container';
+import MainLayoutRouter from './Layout/MainLayout/mainLayoutRouter.container';
 
 import './App.css';
 
@@ -13,20 +12,13 @@ const App = () => (
   <Switch>
     <Route 
       exact
-      path='/login' 
-      render={props =>( !isAuthenticated() ?  <Login {...props}/> : <Redirect to={{ pathname: '/' }}/>  )}
+      path="/login"
+      component={props =>( !isAuthenticated() ?  <Login {...props}/> : <Redirect to={{ pathname: '/' }}/>  )}
     />
     <Route path='/register'
-      render={props =>( !isAuthenticated() ?  <Register {...props}/> : <Redirect to={{ pathname: '/' }}/>  )}
+      component={props =>( !isAuthenticated() ?  <Register {...props}/> : <Redirect to={{ pathname: '/' }}/>  )}
     />
-    <Route path='/' 
-        render={props => 
-          ( isAuthenticated() ? 
-            ( <Home {...props} /> ) :
-            ( <Redirect to={{ pathname: '/login' }}/> )
-          )
-        }
-    />
+    <MainLayoutRouter />
     <Route component={NoMatch}/>
   </Switch>
   </Router> 

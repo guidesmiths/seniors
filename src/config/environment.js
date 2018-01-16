@@ -20,4 +20,4 @@ switch (environment) {
     break;
 }
 
-export const myConfig = config[configOption]
+export const myConfig = config[configOption];
