@@ -3,9 +3,12 @@ import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-d
 
 import MainLayoutRouter from './Layout/MainLayout/mainLayoutRouter.container';
 
+import Login from './Views/Login/login.container';
+import Register from './Views/Register/register.container';
+
 import './App.css';
 
-const isAuthenticated = () => true;
+const isAuthenticated = () => false;
 
 const App = () => (
 	<Router>
@@ -23,11 +26,6 @@ const App = () => (
 		</Switch>
 	</Router> 
 );
-
-
-const Register = () => ( <div>Register</div>);
-
-const Login = () => ( <div>Login</div>);
 
 const NoMatch = () => ( <div>404</div>);
 
