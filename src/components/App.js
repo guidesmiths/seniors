@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import { withRouter } from 'react-router';
 
 import MainLayoutRouter from './Layout/MainLayout/mainLayoutRouter.container';
 
@@ -35,4 +36,5 @@ const App = () => (
 const NoMatch = () => ( <div>404</div>);
 
 
+//export default withRouter(App);
 export default App;

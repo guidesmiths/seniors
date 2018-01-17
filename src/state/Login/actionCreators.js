@@ -13,7 +13,7 @@ export const loginSuccess  = createAction(
 
 export const loginSubmit = createAction(
 	actionTypes.LOGIN_SUBMIT,
-	(email, password) => ({email, password})
+	(email, password, onSuccess) => ({email, password, onSuccess})
 );
 
 export const loginFail = createAction(

@@ -18,7 +18,7 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-	login: (email, password) => { dispatch(loginSubmit(email, password)); },
+	login: (email, password, onSuccess) => { dispatch(loginSubmit(email, password, onSuccess)); },
 });
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Login));

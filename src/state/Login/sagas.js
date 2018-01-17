@@ -17,7 +17,8 @@ export function* loginSaga(action){
 		if(data.success === true){
 			yield call(persistence.setSessionToken, data.token);
 			yield put(actions.loginSuccess(true, "msgs"));
-			yield put(window.location.replace('/'));
+			//yield put(window.location.replace('/blog'));
+			action.payload.onSuccess();
 		}else{
 			yield call(persistence.removeSessionToken);
 			yield put(actions.loginFail(data.error));
@@ -25,7 +26,7 @@ export function* loginSaga(action){
 		}
 		
 	} catch (error) {
-		yield console.log("error");
+		yield console.log("error", error);
 	}
 }
 

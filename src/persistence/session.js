@@ -12,6 +12,5 @@ export const removeSessionToken = () => remove(SESSION_TOKEN);
 
 export const isAuthenticated = () => {
 	const token = getSessionToken();
-	console.log(token);
 	return token !== null ? true : false;
 };

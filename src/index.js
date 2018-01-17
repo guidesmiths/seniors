@@ -5,6 +5,8 @@ import './index.css';
 import App from './components/App';
 import registerServiceWorker from './registerServiceWorker';
 
+import { Router, Route, browserHistory } from 'react-router';
+
 import configureStore from './configureStore';
 
 const store = configureStore();

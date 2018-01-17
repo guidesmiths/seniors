@@ -20,7 +20,6 @@ export default class Home extends React.Component {
 
 	render(){
 		const { value } = this.props;
-		console.log(this.props);
 		return(
 			<div className="App">
 				<header className="App-header">

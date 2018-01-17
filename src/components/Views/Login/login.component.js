@@ -23,10 +23,15 @@ export default class Login extends React.Component {
 		};
 
 		this.handleChange = this.handleChange.bind(this);
+		this.onSuccess = this.onSuccess.bind(this);
 	}
 
 	handleChange(e) {
 		this.setState({ [e.target.id]: e.target.value });
+	}
+
+	onSuccess(){
+		this.props.history.replace('/blog');
 	}
 
 	render(){  
@@ -65,7 +70,7 @@ export default class Login extends React.Component {
 								{ this.props.isChecking && <Spinner/>}
 								{ this.props.error && <div className="errorBox">{this.props.error}</div>}
 
-								<Button type="submit" name="go" className="btn btn-lg btn-primary btn-block" onClick={()=>this.props.login(this.state.email, this.state.password)}>
+								<Button type="submit" name="go" className="btn btn-lg btn-primary btn-block" onClick={()=>this.props.login(this.state.email, this.state.password, this.onSuccess)}>
 									Sign in
 								</Button>
 								
