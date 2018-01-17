@@ -1,7 +1,7 @@
 import { combineReducers } from "redux";
 
 import home from './Home/reducer';
-import login from './Home/reducer';
+import login from './Login/reducer';
 
 const appReducer = combineReducers({
 	home,

@@ -5,7 +5,7 @@ const SESSION_TOKEN = "SESSION_TOKEN";
 export const getSessionToken = () => get(SESSION_TOKEN);
 
 // Setters
-export const setSessionId = sessionToken => put(SESSION_ID, sessionToken);
+export const setSessionToken = sessionToken => put(SESSION_TOKEN, sessionToken);
 
 // Deleters
-export const removeSessionToken = () => remove(SESSION_ID);
+export const removeSessionToken = () => remove(SESSION_TOKEN);
