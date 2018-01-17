@@ -74,3 +74,12 @@ div[role=login] > div {
 .form-links a {
 	color: #fff;
 }
+
+.errorBox{
+	text-align: center;
+    padding: 15px;
+    background: rgba(253, 160, 131, 0.5);
+    border: solid 1px #f00;
+    border-radius: 5px;
+    color: #c53e13;
+}

@@ -10,3 +10,13 @@ export const loginSuccess  = createAction(
 	actionTypes.LOGIN_SUCCESS,
 	(auth, msg) => ({auth, msg})
 );
+
+export const loginSubmit = createAction(
+	actionTypes.LOGIN_SUBMIT,
+	(email, password) => ({email, password})
+);
+
+export const loginFail = createAction(
+	actionTypes.LOGIN_FAIL,
+	error => ({error})
+);

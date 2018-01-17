@@ -10,14 +10,16 @@ import * as persistence from "../../persistence/session";
  */
 
 export function* loginSaga(action){
-	yield console.log("loginSaga", action);
-	yield console.log(actions.loginSuccess);
-	yield console.log(actions.setValue);
 	try{
-		const data = yield call(userApi.login, {email:"juan", password: "pass"} );
-		yield console.log(data);
-		yield call(persistence.setSessionToken, data.token);
-		yield put(actions.loginSuccess(true, "msgs"));
+		const data = yield call(userApi.login, {email: action.payload.email, password: action.payload.password} );
+		if(data.success === true){
+			yield call(persistence.setSessionToken, data.token);
+			yield put(actions.loginSuccess(true, "msgs"));
+		}else{
+			yield call(persistence.removeSessionToken);
+			yield put(actions.loginFail(data.error));
+		}
+		
 	} catch (error) {
 		yield console.log("error");
 	}
@@ -28,5 +30,5 @@ export function* loginSaga(action){
  */
 
 export function* watchLogin(){
-	yield takeLatest('SUBMIT_LOGIN', loginSaga);
+	yield takeLatest('LOGIN_SUBMIT', loginSaga);
 }

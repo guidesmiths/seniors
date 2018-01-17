@@ -1,4 +1,3 @@
 export default ({
-	value: 0,
-	auth: false
+	value: 0
 });

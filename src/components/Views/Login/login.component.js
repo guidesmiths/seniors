@@ -8,6 +8,8 @@ import {
 	Button
 } from 'react-bootstrap';
 
+import Spinner from '../../Commons/Spinner/spinner.container';
+
 import "./login.css";
 
 
@@ -27,7 +29,7 @@ export default class Login extends React.Component {
 		this.setState({ [e.target.id]: e.target.value });
 	}
 
-	render(){
+	render(){  
 		return(
 			<Grid className="container">
 				<Row id="pwd-container">
@@ -60,9 +62,10 @@ export default class Login extends React.Component {
 									onChange={this.handleChange}
 								/>
 
-								<div className="pwstrength_viewport_progress"></div>
+								{ this.props.isChecking && <Spinner/>}
+								{ this.props.error && <div className="errorBox">{this.props.error}</div>}
 
-								<Button type="submit" name="go" className="btn btn-lg btn-primary btn-block" onClick={()=>this.props.login()}>
+								<Button type="submit" name="go" className="btn btn-lg btn-primary btn-block" onClick={()=>this.props.login(this.state.email, this.state.password)}>
 									Sign in
 								</Button>
 								
