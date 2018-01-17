@@ -5,6 +5,8 @@ import * as actionTypes from "./actionTypes";
 import * as actions from "./actionCreators";
 import * as persistence from "../../persistence/session";
 
+import { push, replace } from 'react-router-redux';
+
 /**
  * SAGAS
  */
@@ -15,9 +17,11 @@ export function* loginSaga(action){
 		if(data.success === true){
 			yield call(persistence.setSessionToken, data.token);
 			yield put(actions.loginSuccess(true, "msgs"));
+			yield put(window.location.replace('/'));
 		}else{
 			yield call(persistence.removeSessionToken);
 			yield put(actions.loginFail(data.error));
+			//yield put(push('/register'));
 		}
 		
 	} catch (error) {

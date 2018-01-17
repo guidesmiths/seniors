@@ -6,9 +6,10 @@ import MainLayoutRouter from './Layout/MainLayout/mainLayoutRouter.container';
 import Login from './Views/Login/login.container';
 import Register from './Views/Register/register.container';
 
+import { isAuthenticated } from '../persistence/session';
+
 import './App.css';
 
-const isAuthenticated = () => false;
 
 const App = () => (
 	<Router>
@@ -16,13 +17,17 @@ const App = () => (
 			<Route 
 				exact
 				path="/login"
-				component={props =>( !isAuthenticated() ?  <Login {...props}/> : <Redirect to={{ pathname: '/' }}/>  )}
+				component={props =>( isAuthenticated() ? <Redirect to={{ pathname: '/' }}/> : <Login {...props}/>  )}
 			/>
 			<Route path='/register'
-				component={props =>( !isAuthenticated() ?  <Register {...props}/> : <Redirect to={{ pathname: '/' }}/>  )}
+				component={props =>( isAuthenticated() ? <Redirect to={{ pathname: '/' }}/> : <Register {...props}/>  )}
 			/>
-			<MainLayoutRouter />
+			<Route 
+				path="/"
+				component={props =>( isAuthenticated() ? <MainLayoutRouter /> : <Login {...props}/> )}
+			/>
 			<Route component={NoMatch}/>
+
 		</Switch>
 	</Router> 
 );

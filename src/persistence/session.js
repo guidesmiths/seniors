@@ -9,3 +9,9 @@ export const setSessionToken = sessionToken => put(SESSION_TOKEN, sessionToken);
 
 // Deleters
 export const removeSessionToken = () => remove(SESSION_TOKEN);
+
+export const isAuthenticated = () => {
+	const token = getSessionToken();
+	console.log(token);
+	return token !== null ? true : false;
+};
