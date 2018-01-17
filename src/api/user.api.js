@@ -9,3 +9,8 @@ export const login = async (user) => {
 	}
 	
 };
+
+export const logout = async (user) => {
+	await sleep(1000);
+	return {};
+};

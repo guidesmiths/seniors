@@ -9,10 +9,11 @@ export default class NavBar extends React.Component {
 	constructor(props){
 		super(props);
 		this.state = {};
+		this.onSuccess = this.onSuccess.bind(this);
 	}
 
-	changeNumber = (value) => {
-		this.props.setValue(value);
+	onSuccess() {
+		this.props.history.replace('/login');
 	}
 
 	render(){
@@ -39,7 +40,7 @@ export default class NavBar extends React.Component {
 					</NavDropdown>
 				</Nav>
 				<Nav pullRight>
-					<NavItem eventKey={4} onClick={ () => this.props.logoutSubmit() }>
+					<NavItem eventKey={4} onClick={ () => this.props.logout(this.onSuccess) }>
 						Logout
 					</NavItem>
 				</Nav>

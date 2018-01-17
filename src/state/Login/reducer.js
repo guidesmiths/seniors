@@ -11,6 +11,9 @@ export default handleActions(
 		[actions.loginSubmit]: (state) => {
 			return { ...state, isChecking: true };
 		},
+		[actions.logoutSuccess]: (state) => {
+			return { ...state, auth: false };
+		},
 		[actions.loginSuccess]: (state, {payload: {auth, msg}} ) => {
 			return { ...state, auth: true, isChecking: false };
 		},

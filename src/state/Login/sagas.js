@@ -24,10 +24,25 @@ export function* loginSaga(action){
 	}
 }
 
+export function* logoutSaga(action) {
+	try{
+		yield call(userApi.logout);
+		yield call(persistence.removeSessionToken);
+		yield put(actions.logoutSuccess());
+		action.payload.onSuccess();
+	} catch (error) {
+		yield console.log("error", error);
+	}
+}
+
 /**
  * WATCHERS
  */
 
 export function* watchLogin(){
 	yield takeLatest('LOGIN_SUBMIT', loginSaga);
+}
+
+export function* watchLogout(){
+	yield takeLatest('LOGOUT_SUBMIT', logoutSaga);
 }

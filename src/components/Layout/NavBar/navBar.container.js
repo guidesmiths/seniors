@@ -20,9 +20,9 @@ const mapStateToProps = (state, ownProps) => ({
 	value: getValue(state)
 });
 
-const mapDispatchToProps = {
+const mapDispatchToProps = (dispatch) => ({
 	setValue,
-	logoutSubmit
-};
+	logout: (onSuccess) => { dispatch(logoutSubmit(onSuccess)); }
+});
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(NavBar));
