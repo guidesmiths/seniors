@@ -30,8 +30,8 @@ export default class Login extends React.Component {
 		this.setState({ [e.target.id]: e.target.value });
 	}
 
-	onSuccess(){
-		this.props.history.replace('/blog');
+	onSuccess() {
+		this.props.history.replace('/');
 	}
 
 	render(){  

@@ -9,6 +9,10 @@ import {
 	setValue
 } from "../../../state/Home/actionCreators";
 
+import {
+	logoutSubmit
+} from "../../../state/Login/actionCreators";
+
 import NavBar from './navBar.component';
 
 const mapStateToProps = (state, ownProps) => ({
@@ -17,7 +21,8 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 const mapDispatchToProps = {
-	setValue
+	setValue,
+	logoutSubmit
 };
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(NavBar));

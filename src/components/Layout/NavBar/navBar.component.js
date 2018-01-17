@@ -38,6 +38,11 @@ export default class NavBar extends React.Component {
 						<MenuItem eventKey={3.4}>Separated link</MenuItem>
 					</NavDropdown>
 				</Nav>
+				<Nav pullRight>
+					<NavItem eventKey={4} onClick={ () => this.props.logoutSubmit() }>
+						Logout
+					</NavItem>
+				</Nav>
 			</Navbar>
 		);
 	}

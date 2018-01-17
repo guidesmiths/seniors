@@ -19,7 +19,6 @@ const MainLayoutRouter = () => (
 		<Switch>
 			<Route exact path='/' component={Home} />
 			<Route path='/blog' component={Blog} />
-
 		</Switch>
 	</MainLayout>
 );

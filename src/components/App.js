@@ -28,13 +28,11 @@ const App = () => (
 				component={props =>( isAuthenticated() ? <MainLayoutRouter /> : <Login {...props}/> )}
 			/>
 			<Route component={NoMatch}/>
-
 		</Switch>
 	</Router> 
 );
 
 const NoMatch = () => ( <div>404</div>);
-
 
 //export default withRouter(App);
 export default App;

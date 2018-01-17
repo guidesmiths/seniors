@@ -16,6 +16,11 @@ export const loginSubmit = createAction(
 	(email, password, onSuccess) => ({email, password, onSuccess})
 );
 
+export const logoutSubmit = createAction(
+	actionTypes.LOGOUT_SUBMIT,
+	(onLogout) => ({ onLogout })
+);
+
 export const loginFail = createAction(
 	actionTypes.LOGIN_FAIL,
 	error => ({error})
