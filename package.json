@@ -36,10 +36,5 @@
     "eject": "react-scripts eject",
     "precommit": "make lint",
     "prepush": "make lint"
-  },
-  "jest": {
-    "setupFiles": [
-      "./src/setupTests.js"
-    ]
   }
 }

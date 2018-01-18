@@ -13,7 +13,7 @@ export function* loginSaga(action){
 		if(data.success === true){
 			yield call(persistence.setSessionToken, data.token);
 			yield put(actions.loginSuccess(true, "msgs"));
-			action.payload.onSuccess();
+			yield call(action.payload.onSuccess);
 		}else{
 			yield call(persistence.removeSessionToken);
 			yield put(actions.loginFail(data.error));
@@ -29,7 +29,7 @@ export function* logoutSaga(action) {
 		yield call(userApi.logout);
 		yield call(persistence.removeSessionToken);
 		yield put(actions.logoutSuccess());
-		action.payload.onSuccess();
+		yield call(action.payload.onSuccess);
 	} catch (error) {
 		yield console.log("error", error);
 	}
