@@ -70,7 +70,7 @@ export default class Login extends React.Component {
 								{ this.props.isChecking && <Spinner/>}
 								{ this.props.error && <div className="errorBox">{this.props.error}</div>}
 
-								<Button type="submit" name="go" className="btn btn-lg btn-primary btn-block" onClick={()=>this.props.login(this.state.email, this.state.password, this.onSuccess)}>
+								<Button id="submit" type="submit" name="go" className="btn btn-lg btn-primary btn-block" onClick={()=>this.props.login(this.state.email, this.state.password, this.onSuccess)}>
 									Sign in
 								</Button>
 								

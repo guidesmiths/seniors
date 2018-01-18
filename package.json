@@ -26,6 +26,9 @@
     "eslint-plugin-react": "^7.5.1",
     "eslint-rallycoding": "^1.2.0",
     "husky": "^0.14.3",
+    "jest": "^22.1.3",
+    "jest-cli": "^22.1.3",
+    "puppeteer": "^1.0.0",
     "react-scripts": "1.1.0",
     "redux-devtools": "^3.4.1"
   },
