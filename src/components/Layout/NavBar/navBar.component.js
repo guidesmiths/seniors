@@ -51,6 +51,5 @@ export default class NavBar extends React.Component {
 }
 
 NavBar.propTypes = {
-	value: PropTypes.value,
-	setValue: PropTypes.func
+	logout: PropTypes.func
 };

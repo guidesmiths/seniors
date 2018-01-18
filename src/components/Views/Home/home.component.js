@@ -4,11 +4,6 @@ import "./home.css";
 import logo from '../../../logo.svg';
 
 export default class Home extends React.Component {
-	static PropTypes = {
-		value: PropTypes.value,
-		setValue: PropTypes.func
-	}
-
 	constructor(props){
 		super(props);
 		this.state = {};
@@ -36,3 +31,8 @@ export default class Home extends React.Component {
 	}
 
 }
+
+Home.propTypes = {
+	value: PropTypes.number,
+	setValue: PropTypes.func
+};
