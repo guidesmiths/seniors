@@ -9,12 +9,12 @@ describe("selectors Home", () => {
 				value: 5
 			}
 		}
-	}
+	};
 
-  test("value", () => {
-    expect(selectors.getValue(state)).toEqual(
-      state.root.home.value
-    );
-  });
+	test("value", () => {
+		expect(selectors.getValue(state)).toEqual(
+			state.root.home.value
+		);
+	});
 
 });

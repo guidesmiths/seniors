@@ -12,24 +12,24 @@ describe("selectors Home", () => {
 				error: "error"
 			}
 		}
-	}
+	};
 
-  test("value", () => {
-    expect(selectors.getValue(state)).toEqual(
-      state.root.login.value
-    );
-  });
+	test("value", () => {
+		expect(selectors.getValue(state)).toEqual(
+			state.root.login.value
+		);
+	});
 
-  test("isChecking", () => {
-    expect(selectors.getIsChecking(state)).toEqual(
-      state.root.login.isChecking
-    );
-  });
+	test("isChecking", () => {
+		expect(selectors.getIsChecking(state)).toEqual(
+			state.root.login.isChecking
+		);
+	});
 
-  test("error", () => {
-    expect(selectors.getError(state)).toEqual(
-      state.root.login.error
-    );
-  });
+	test("error", () => {
+		expect(selectors.getError(state)).toEqual(
+			state.root.login.error
+		);
+	});
 
 });

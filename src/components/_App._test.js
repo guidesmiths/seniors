@@ -8,7 +8,7 @@ import { createStore } from "redux";
 
 it('renders without crashing', () => {
 	const div = document.createElement("div");
-  let store = createStore(rootReducer);
+	let store = createStore(rootReducer);
   
 	shallow(<Provider store={store}><App /></Provider>);
 });

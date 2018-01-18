@@ -1,5 +1,5 @@
 import { call, put, select } from "redux-saga/effects";
-import { loginSaga } from "./sagas"
+import { loginSaga } from "./sagas";
 import * as selectors from "./selectors";
 import * as userApi from "../../api/user.api";
 import * as actionTypes from "./actionTypes";
@@ -8,13 +8,13 @@ import * as persistence from "../../persistence/session";
 
 describe("sagas Login", () => {
 
-  describe("loginSaga", () => {
+	describe("loginSaga", () => {
 
-    test("proper flow", () => {
-      const generator = loginSaga();
+		test("proper flow", () => {
+			const generator = loginSaga();
 
-      console.log(generator.next());
-      /*
+			console.log(generator.next());
+			/*
       const time = Date.now();
       const userId = '111-111-11';
 
@@ -23,9 +23,9 @@ describe("sagas Login", () => {
       expect(generator.next(userId).value).toEqual(call(fetchLastContact, userId));
       expect(generator.next(time).value).toEqual(put(resolveLastContact(time)));
       expect(generator.next().done).toEqual(true);*/
-    });
+		});
 
-    /*test("throwed flow", () => {
+		/*test("throwed flow", () => {
       const generator = getCustomerLastContactSaga();
       const userId = '111-111-11';
       expect(generator.next().value).toEqual(select(getCustomerId));
@@ -35,7 +35,7 @@ describe("sagas Login", () => {
     });
     */
 
-  });
+	});
 });
 
 /*
