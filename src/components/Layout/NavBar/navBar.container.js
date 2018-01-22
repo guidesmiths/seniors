@@ -13,7 +13,7 @@ import {
 	logoutSubmit
 } from "../../../state/Login/actionCreators";
 
-import NavBar from './navBar.component';
+import MyNavBar from './navBar.component';
 
 const mapStateToProps = (state, ownProps) => ({
 	location: ownProps.location,
@@ -25,4 +25,4 @@ const mapDispatchToProps = (dispatch) => ({
 	logout: (onSuccess) => { dispatch(logoutSubmit(onSuccess)); }
 });
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(NavBar));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(MyNavBar));

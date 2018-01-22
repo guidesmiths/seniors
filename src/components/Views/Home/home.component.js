@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import "./home.css";
 import logo from '../../../logo.svg';
 
+import { Button } from 'reactstrap';
+
 export default class Home extends React.Component {
 	constructor(props){
 		super(props);
@@ -26,6 +28,7 @@ export default class Home extends React.Component {
 				</p>
 				<button onClick={()=>this.changeNumber(5)} label="change to 5" />
 				<p>{value}</p>
+				<Button color="danger">Danger!</Button>
 			</div>
 		);
 	}

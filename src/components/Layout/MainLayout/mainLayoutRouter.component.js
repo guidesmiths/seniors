@@ -1,14 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 
-import NavBar from '../NavBar/navBar.container';
+import MyNavBar from '../NavBar/navBar.container';
 import Home from '../../Views/Home/home.container';
 import Blog from '../../Views/Blog/blog.container';
 
 const MainLayout = ({children, ...rest}) => {
 	return (
 		<div className="page page-login">
-			<NavBar />
+			<MyNavBar />
 			<div className="main">{children}</div>
 		</div>
 	);
