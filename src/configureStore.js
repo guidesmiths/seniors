@@ -1,10 +1,10 @@
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import { ConnectedRouter, routerReducer, routerMiddleware, push } from 'react-router-redux';
- 
+
 import createHistory from 'history/createBrowserHistory';
 
-import { myConfig } from './config/environment';
+import myConfig from './config';
 
 import rootReducer from './state/index';
 import initialState from "./state/initial.state";
