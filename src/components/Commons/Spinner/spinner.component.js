@@ -12,12 +12,18 @@ export default class Spinner extends React.Component {
 
 	render(){
 		return(
-			<div className="loader"></div>
+			<div className="loader" style={{borderColor: this.props.circleColor , borderTopColor: this.props.segmentColor}}></div>
 		);
 	}
 
 }
 
 Spinner.propTypes = {
-	name: PropTypes.string
+	circleColor: PropTypes.string,
+	segmentColor: PropTypes.string
+};
+
+Spinner.defaultProps = {
+	circleColor: '#f3f3f3',
+	segmentColor: '#3498db'
 };

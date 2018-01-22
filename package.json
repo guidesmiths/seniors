@@ -20,6 +20,7 @@
     "reselect": "^3.0.1"
   },
   "devDependencies": {
+    "@storybook/react": "^3.3.10",
     "eslint": "^4.15.0",
     "eslint-config-imperative-es6": "^2.0.0",
     "eslint-config-rallycoding": "^3.2.0",
@@ -38,6 +39,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "precommit": "make lint",
-    "prepush": "make lint"
+    "prepush": "make lint",
+    "storybook": "start-storybook -p 9001 -c .storybook"
   }
 }
