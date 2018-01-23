@@ -14,6 +14,7 @@ import {
 	DropdownItem } from 'reactstrap';
 
 //import "./navBar.css";
+import Spinner from '../../Commons/Spinner/spinner.container';
 
 export default class MyNavBar extends React.Component {
 	constructor(props) {
@@ -21,7 +22,8 @@ export default class MyNavBar extends React.Component {
 
 		this.toggle = this.toggle.bind(this);
 		this.state = {
-			isOpen: false
+			isOpen: false,
+			loading: false,
 		};
 		this.onSuccess = this.onSuccess.bind(this);
 	}
@@ -65,14 +67,17 @@ export default class MyNavBar extends React.Component {
 									</DropdownItem>
 								</DropdownMenu>
 							</UncontrolledDropdown>
-							<div className="nav-item" onClick={ () => this.props.logout(this.onSuccess) } 
-								style={{    
-									cursor: 'pointer',
-									padding: '15px 10px 15px 20px',
-									color: '#fff'
-								}}>
-								<p style={{lineHeight: '20px'}}>Logount</p>
-							</div>
+							{ this.state.loading ? 
+								<Spinner size={20} />
+								:
+								<div className="nav-item" onClick={ () => { this.setState({loading: true}); this.props.logout(this.onSuccess); }} 
+									style={{    
+										cursor: 'pointer',
+										padding: '15px 10px 15px 20px',
+										color: '#fff'
+									}}>
+									<p style={{lineHeight: '20px'}}>Logount</p>
+								</div> }
 						</Nav>
 					</Collapse>
 				</Navbar>

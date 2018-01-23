@@ -2,4 +2,14 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  font-size: initial;
+}
+
+a {
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+a:hover {
+	opacity: 1;
 }

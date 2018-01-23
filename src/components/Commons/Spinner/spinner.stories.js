@@ -8,4 +8,7 @@ storiesOf('Spinner', module)
 	))
 	.add('Spinner green', () => (
 		<Spinner circleColor="#4d4d4d" segmentColor="#34db98" />
+	))
+	.add('Spinner small', () => (
+		<Spinner size={20} />
 	));
