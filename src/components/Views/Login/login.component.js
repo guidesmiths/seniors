@@ -88,6 +88,7 @@ export default class Login extends React.Component {
 					</Col>
 					<Col md={4}></Col>
 				</Row>
+				
 			</Grid>
 		);
 	}
