@@ -4,30 +4,28 @@ import "./filter.css";
 
 import { FormGroup, Label, Input } from 'reactstrap';
 
+const duties = ['lavar', 'planchar', 'cocinar'];
+
 export default class Filter extends React.Component {
 
 	constructor(props) {
 		super(props);
 		this.state = {
-			dutiesByName: ['lavar', 'planchar', 'cocinar'],
-			dutiesSelected: [],
+			duties: duties.reduce((total, duty) => Object.assign(total, { [duty]: false }), {}),
 			range: {
 				from: 5,
 				to: 10
 			}
 		};
-		this.selectDutie = this.selectDutie.bind(this);
+		this.selectDuty = this.selectDuty.bind(this);
 	}
 
-	selectDutie(dutie){
-		let oldDuties = [...this.state.dutiesSelected];
-		if( oldDuties.indexOf(dutie) >= 0){
-			oldDuties.splice(oldDuties.indexOf(dutie),1);
-		}else{
-			oldDuties.push(dutie);
-		}
-
-		this.setState({dutiesSelected: oldDuties});
+	selectDuty(duty) {
+		const newDuties = {
+			...this.state.duties,
+			[duty]: !this.state.duties[duty]
+		};
+		this.setState({ duties: newDuties });
 	}
 
 	render() {
@@ -39,18 +37,17 @@ export default class Filter extends React.Component {
 
 					<strong> ¿qué sabe hacer? </strong>
 					<br></br>
-					{this.state.dutiesByName.map((dutie, i) => 
+					{Object.keys(this.state.duties).map((duty) =>
 						<MyCheckbox
-							key={dutie + new Date().getTime()}
-							skill={dutie} checked={this.state.dutiesSelected.indexOf(dutie) >= 0}
-							onChange={(checked) => this.selectDutie(dutie)}
+							key={duty + new Date().getTime()}
+							skill={duty} checked={this.state.duties[duty]}
+							onChange={(checked) => this.selectDuty(duty)}
 						/>
 					)}
-				
 
-					<TwoValuesSlider 
+					<TwoValuesSlider
 						from={this.state.range.from}
-						to={this.state.range.to} 
+						to={this.state.range.to}
 						setFrom={(value) => this.setState({ range: { ...this.state.range, from: value} }) }
 						setTo={(value) => this.setState({ range: { ...this.state.range, to: value} }) }
 					/>
@@ -76,7 +73,7 @@ const MyCheckbox = ({ skill, checked, onChange }) =>
 	</div>;
 
 
-const TwoValuesSlider = ({from, to, setFrom, setTo}) => 
+const TwoValuesSlider = ({from, to, setFrom, setTo}) =>
 	<section className="range-slider">
 		<span className="rangeValues"></span>
 		<input value={from} min="0" max="15" step="0.5" type="range" onChange={(e) => setFrom(e.target.value) }/>

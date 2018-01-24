@@ -1,6 +1,6 @@
 export default ({
-	duties: [],
-	languages: [],
+	duties: {},
+	languages: {},
 	postCode: '',
 	priceRange: {
 		from: 0,
