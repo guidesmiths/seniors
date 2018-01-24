@@ -6,7 +6,7 @@ import { FormGroup, Label, Input } from 'reactstrap';
 
 export default class Filter extends React.Component {
 
-	constructor(props){
+	constructor(props) {
 		super(props);
 		this.state = {
 			lavar: false,
@@ -14,8 +14,7 @@ export default class Filter extends React.Component {
 		};
 	}
 
-	render(){
-		console.log(this.state);
+	render() {
 		return(
 			<div className="col-md-3 flex flex-1 flex-column filterVerBar">
 				<strong style={{fontSize: '1.5em'}}>¿Cómo es tu ayudante ideal?</strong>
@@ -24,10 +23,8 @@ export default class Filter extends React.Component {
 
 					<strong> ¿qué sabe hacer? </strong>
 					<br></br>
-
 					<MyCheckbox skill="Lavar" checked={this.state.lavar} onChange={(checked) => this.setState({lavar: checked })}/>
 					<MyCheckbox skill="Planchar" checked={this.state.planchar} onChange={(checked) => this.setState({planchar: checked })}/>
-
 				</div>
 
 			</div>
@@ -36,7 +33,7 @@ export default class Filter extends React.Component {
 
 }
 
-const MyCheckbox = ({ skill, checked, onChange }) => 
+const MyCheckbox = ({ skill, checked, onChange }) =>
 	<div>
 		<label>
 			<input
