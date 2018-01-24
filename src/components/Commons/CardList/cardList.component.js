@@ -11,11 +11,15 @@ export default class CardList extends React.Component {
 	}
 
 	render(){
-		const assistants = this.props.assistants.assistants || [];
-		console.log(assistants)
+		const assistants = this.props.assistants || [];
 		return(
 			<div>
-				{ assistants.map((assistant) => <Card key={new Date().getTime()} {...assistant}/>)}
+				{
+					assistants.length > 0 &&
+					assistants.map((assistant) => 
+						<Card key={new Date().getTime()} {...assistant}/>
+					)
+				}
 			</div>
 		);
 	}

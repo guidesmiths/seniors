@@ -9,18 +9,18 @@ import { onFilterChanged } from "./actionCreators";
  * SAGAS
  */
 
- export function* processFilterChange({ payload: { value, type } }) {
-    // fetch data from api
-    // refresh data
-    try {
-        yield put(actions.setFilter(value, type));
-        const filter = yield select(selectors.getFilters);
-        console.log(filter);
-        const { data } = yield call(assistantApi.fetchData, filter);
-        console.log(data);
-    } catch(error) {
-        console.error(error);
-    }
+export function* processFilterChange({ payload: { value, type } }) {
+	// fetch data from api
+	// refresh data
+	try {
+		yield put(actions.setFilter(value, type));
+		const filter = yield select(selectors.getFilters);
+		console.log(filter);
+		const { data } = yield call(assistantApi.fetchData, filter);
+		console.log(data);
+	} catch(error) {
+		console.error(error);
+	}
 //     yield put(actions.startGetKeyValue());
 //     try {
 //     yield put(actions.resolveGetKeyValue(key, value));
@@ -36,5 +36,5 @@ import { onFilterChanged } from "./actionCreators";
  */
 
 export function* watchOnFilterChanged() {
-  yield takeEvery(actionTypes.FILTER_CHANGED, processFilterChange);
+	yield takeEvery(actionTypes.FILTER_CHANGED, processFilterChange);
 }

@@ -4,10 +4,7 @@ import * as actions from "./actionCreators";
 
 export default handleActions(
 	{
-		[actions.setAssistants]: (state, { payload }) => {
-			console.log('data: ', payload)
-			return payload;
-		}
+		[actions.setAssistants]: (state, { payload }) => payload
 	},
 	initialState
 );
