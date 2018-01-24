@@ -12,19 +12,20 @@ export default class Card extends React.Component {
 	}
 
 	render(){
+		const { personal, price, skills, score } = this.props.assistant;
 		return(
-			<div className="col-md-8 cardItem flex">
+			<div key={personal.id} className="col-md-8 cardItem flex">
 				<div className="flex flex-1 flex-column">
 					<div className="flex flex-row">
 
 						<div className="flex flex-column flex-align-center extra-margin-right-xl" style={{position: 'relative'}}>
 							<div className="PresenceProfilePic" style={{position: 'relative'}}>
-								<img src={this.props.personal.avatar} className="ProfilePic notranslate verb-profile-pic img-responsive img-responsive" alt={this.props.personal.name} style={{opacity: '1'}}>
+								<img src={personal.avatar} className="ProfilePic notranslate verb-profile-pic img-responsive img-responsive" alt={personal.name} style={{opacity: '1'}}>
 								</img>
 							</div>
 							<div className="flex flex-column flex-align-center  mobile-hide" style={{padding: '5px 0px',minWidth: '150px'}}>
 								<div style={{fontSize: '16px', color: 'rgb(66, 200, 138)', letterSpacing: '1.1px'}}>
-									<span className="notranslate">{this.props.price.range.from}-{this.props.price.range.to}{this.props.price.currency}/h</span>
+									<span className="notranslate">{price.range.from}-{price.range.to}{price.currency}/h</span>
 								</div>
 							</div>
 						</div>
@@ -34,16 +35,16 @@ export default class Card extends React.Component {
 								<div className="flex flex-1 flex-wrap flex-row mobile-flex-column flex-align-center">
 									<div className="flex flex-align-center">
 										<h2 className="no-margin extra-margin-right-md notranslate" style={{marginBottom: '0px'}}>
-											{this.props.personal.name}
+											{personal.name}
 										</h2>
-										<img src={this.props.personal.country.flag} className="Flag extra-margin-right-sm" width="20" height="20" style={{maxWidth: 'none'}}>
+										<img src={personal.country.flag} className="Flag extra-margin-right-sm" width="20" height="20" style={{maxWidth: 'none'}}>
 										</img>
 
 									</div>
 
 									<div className="StarRatings flex flex-row flex-align-center mobile-extra-margin-top-md">
-										<div className="flex num-ratings" aria-label="70 valoraciones" aria-label-notranslate="true">
-											<span className="notranslate">{this.props.personal.age}</span>
+										<div className="flex num-ratings">
+											<span className="notranslate">{personal.age}</span>
 										</div>
 									</div>
 								</div>
@@ -58,20 +59,20 @@ export default class Card extends React.Component {
 
 							<div className="mobile-hide">
 								<div className="flex mobile-flex-column flex-row">
-									{this.props.skills.duties.map((duty) => <Badge color="primary" key={new Date().getTime()}>{duty}</Badge>)}
+									{skills.duties.map((duty) => <Badge color="primary" key={personal.id+duty+'duty'}>{duty}</Badge>)}
 								</div>
 
 								<div className="flex mobile-flex-column flex-row">
-									{this.props.skills.languages.map((lang) => <Badge color="secondary" key={new Date().getTime()}>{lang}</Badge>)}
+									{skills.languages.map((lang) => <Badge color="secondary" key={personal.id+lang+'lang'}>{lang}</Badge>)}
 								</div>
 
 								<div className="flex flex-row mobile-flex-column flex-align-center mobile-flex-align-start">
 									<span className="ProfLanguageList flex flex-align-center" style={{flexWrap: 'wrap'}}>
 										<span className="ProfLanguage notranslate flex flex-row flex-align-center" style={{marginRight: '5px'}}>
 											<div style={{marginRight: '5px'}}>Puntuación:</div>
-											<div className="flex flex-row flex-align-center" aria-label="(B2) Upper Intermediate" role="img">
+											<div className="flex flex-row flex-align-center" role="img">
 												{[...new Array(5)].map((_, i) =>
-													<div key={new Date().getTime()} style={{color: (i + 1) <= this.props.score ? 'rgb(254, 221, 167)' : 'rgb(216, 216, 216)', fontSize: '40px'}}>•</div>
+													<div key={i+new Date().getTime()} style={{color: (i + 1) <= score ? 'rgb(254, 221, 167)' : 'rgb(216, 216, 216)', fontSize: '40px'}}>•</div>
 												)}
 											</div>
 										</span>
@@ -82,7 +83,7 @@ export default class Card extends React.Component {
 
 								<div className="card-description" style={{minWidth: '0px'}}>
 									<div className="flex notranslate" style={{minWidth: '0px'}}>
-										{this.props.personal.description}
+										{personal.description}
 									</div>
 								</div>
 							</div>

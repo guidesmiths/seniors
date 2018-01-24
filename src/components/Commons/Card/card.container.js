@@ -1,4 +1,4 @@
-import { connect } from "react-redux";
+/*import { connect } from "react-redux";
 import { withRouter } from 'react-router';
 
 import Card from './card.component';
@@ -10,3 +10,4 @@ const mapDispatchToProps = {
 };
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Card));
+*/
