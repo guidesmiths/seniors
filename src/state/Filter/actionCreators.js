@@ -3,5 +3,5 @@ import * as actionTypes from "./actionTypes";
 
 export const setFilter = createAction(
 	actionTypes.SET_FILTER,
-	value => ({value})
+	(value, type) => ({ value, type })
 );
