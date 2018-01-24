@@ -6,6 +6,7 @@ import logo from '../../../logo.svg';
 import { Button } from 'reactstrap';
 
 import Filter from '../../Commons/Filter/filter.container';
+import CardList from '../../Commons/CardList/cardList.container';
 
 export default class Home extends React.Component {
 	constructor(props){
@@ -22,6 +23,7 @@ export default class Home extends React.Component {
 		return(
 			<div className="App">
 				<Filter />
+				<CardList />
 			</div>
 		);
 	}
