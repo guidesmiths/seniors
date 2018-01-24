@@ -8,7 +8,7 @@ export default handleActions(
 			const reducerByType = {
 				duties: () => ({ ...state.duties, ...value }),
 				languages: () => ({ ...state.languages, ...value }),
-				postCode: () => ({ postCode: value }),
+				postCode: () => value ,
 				priceRange: () => ({ ...state.priceRange, ...value })
 			};
 			return { ...state,  [type]: reducerByType[type]() || {}};

@@ -11,21 +11,11 @@ export default class Filter extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			duties: duties.reduce((total, duty) => Object.assign(total, { [duty]: false }), {}),
 			range: {
 				from: 5,
 				to: 10
 			}
 		};
-		this.selectDuty = this.selectDuty.bind(this);
-	}
-
-	selectDuty(duty) {
-		const newDuties = {
-			...this.state.duties,
-			[duty]: !this.state.duties[duty]
-		};
-		this.setState({ duties: newDuties });
 	}
 
 	render() {
@@ -34,8 +24,10 @@ export default class Filter extends React.Component {
 
 		return(
 			<div className="col-md-3 flex flex-1 flex-column filterVerBar">
-				<strong style={{fontSize: '1.5em'}}>¿Cómo es tu ayudante ideal?</strong>
-				<br></br>
+				<div className="filterItem">
+					<strong style={{fontSize: '1.5em'}}>¿Cómo es tu ayudante ideal?</strong>
+					<br></br>
+				</div>
 				<div className="filterItem">
 
 					<strong> ¿Qué sabe hacer? </strong>
@@ -63,12 +55,22 @@ export default class Filter extends React.Component {
 				</div>
 
 				<div className="filterItem">
+					<strong> Precio </strong>
 					<TwoValuesSlider
-						from={this.state.range.from}
-						to={this.state.range.to}
-						setFrom={(value) => this.setState({ range: { ...this.state.range, from: value} }) }
-						setTo={(value) => this.setState({ range: { ...this.state.range, to: value} }) }
+						from={priceRange.from}
+						to={priceRange.to}
+						setFrom={(value) => this.props.setFilter({from: value}, 'priceRange')}
+						setTo={(value) => this.props.setFilter({to: value}, 'priceRange')}
 					/>
+				</div>
+				<div className="filterItem">
+					<strong> Código Postal </strong>
+					<input
+						className="inputTextFilter"
+						name="postalCode"
+						type="text"
+						value={postCode}
+						onChange={(e)=> this.props.setFilter(e.target.value, 'postCode')} />
 				</div>
 				
 			</div>
