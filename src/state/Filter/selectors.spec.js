@@ -5,8 +5,14 @@ describe("selectors Home", () => {
 
 	const state = {
 		root: {
-			home: {
-				value: 5
+			filter: {
+				duties: [],
+				languages: [],
+				postCode: '',
+				priceRange: {
+					from: 0,
+					to: 1000
+				}
 			}
 		}
 	};
