@@ -1,0 +1,107 @@
+.filterHorBar{
+	background: #fff;
+	display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    color: #787b83;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 1px 1px 1px 0 rgba(0,0,0,.1);
+    margin: auto;
+    margin-bottom: 20px;
+    overflow: hidden;
+    justify-content: flex-start;
+    overflow: visible;
+}
+
+.filterHorOptions{
+    position: absolute;
+    z-index: 10;
+    width: 100px;
+    background: #fff;
+    min-width: 200px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    color: #787b83;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 1px 1px 1px 0 rgba(0,0,0,.1);
+    margin: 5px;
+    padding: 15px;
+}
+
+.flex{
+	display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.flex-1{
+	-webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.filterHorItem{
+    border-right: solid 2px #eaeaea;
+    height: 70px;
+    min-width: 150px;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column{
+	-webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.flex-row{
+	-webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.card-description{
+	height: 68px;
+	overflow: hidden;
+}
+
+.flex-justify-content-space-between {
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.flex-align-center {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.extra-margin-right-xl {
+    margin-right: 16px!important;
+}
+
+.ProfileItemBase--InnerBlock {
+    padding: 16px;
+    padding: 1rem;
+    border-radius: .4rem;
+    margin-right: 8px;
+    margin-right: .5rem;
+    background-color: #f8f8f8;
+}
+
+.ProfileItemBase .PresenceProfilePic img {
+    border-radius: 4px;
+}
+
+.extra-margin-bottom-xl {
+    margin-bottom: 16px !important;
+}
+.verb-profile-pic {
+    display: block;
+    transition: opacity .3s ease-in-out;
+    background-size: cover;
+}
