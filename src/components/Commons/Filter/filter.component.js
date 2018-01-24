@@ -79,7 +79,6 @@ const MyCheckbox = ({ skill, checked, onChange }) =>
 const TwoValuesSlider = ({from, to, setFrom, setTo}) => 
 	<section className="range-slider">
 		<span className="rangeValues"></span>
-		<p> {from}{to}</p>
 		<input value={from} min="0" max="15" step="0.5" type="range" onChange={(e) => setFrom(e.target.value) }/>
 		<input value={to} min="0" max="15" step="0.5" type="range" onChange={(e) => setTo(e.target.value) }/>
 	</section>;
