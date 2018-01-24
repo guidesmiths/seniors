@@ -3,11 +3,13 @@ import { combineReducers } from "redux";
 import home from './Home/reducer';
 import login from './Login/reducer';
 import filter from './Filter/reducer';
+import assistants from './Assistants/reducer';
 
 const appReducer = combineReducers({
 	home,
 	login,
-	filter
+	filter,
+	assistants
 });
 
 const RootReducer = (state, action) => {

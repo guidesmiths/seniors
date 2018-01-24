@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import "./cardList.css";
 import Card from "../Card/card.container";
 
-
 export default class CardList extends React.Component {
 
 	constructor(props){
@@ -12,9 +11,11 @@ export default class CardList extends React.Component {
 	}
 
 	render(){
+		const assistants = this.props.assistants.assistants || [];
+		console.log(assistants)
 		return(
 			<div>
-				{this.props.data.map((assistant) => <Card key={new Date().getTime()} {...assistant}/>)}
+				{ assistants.map((assistant) => <Card key={new Date().getTime()} {...assistant}/>)}
 			</div>
 		);
 	}

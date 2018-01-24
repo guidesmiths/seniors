@@ -3,7 +3,6 @@ import * as assistantApi from "../../api/assistant.api";
 import * as actionTypes from "./actionTypes";
 import * as selectors from "./selectors";
 import * as actions from "./actionCreators";
-import * as assistantActions from "../Assistants/actionCreators";
 import { onFilterChanged } from "./actionCreators";
 
 /**
@@ -11,15 +10,25 @@ import { onFilterChanged } from "./actionCreators";
  */
 
  export function* processFilterChange({ payload: { value, type } }) {
+    // fetch data from api
+    // refresh data
     try {
         yield put(actions.setFilter(value, type));
         const filter = yield select(selectors.getFilters);
+        console.log(filter);
         const { data } = yield call(assistantApi.fetchData, filter);
         console.log(data);
-        yield put(assistantActions.setAssistants(data));
     } catch(error) {
         console.error(error);
     }
+//     yield put(actions.startGetKeyValue());
+//     try {
+//     yield put(actions.resolveGetKeyValue(key, value));
+//     } catch (error) {
+//     yield put(actions.rejectGetKeyValue(error.message));
+//     } finally {
+//     yield put(appActions.appIsWaiting(false));
+// }
 }
 
 /**

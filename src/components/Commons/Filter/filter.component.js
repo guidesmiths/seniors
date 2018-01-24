@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./filter.css";
 
-const Filter = ({ setFilter, filter: { duties, priceRange, postCode, languages } }) =>
+const Filter = ({ onFilterChanged, filter: { duties, priceRange, postCode, languages } }) =>
 	<div className="col-md-3 flex flex-1 flex-column filterVerBar">
 		<div className="filterItem">
 			<strong style={{fontSize: '1.5em'}}>¿Cómo es tu ayudante ideal?</strong>
@@ -16,7 +16,7 @@ const Filter = ({ setFilter, filter: { duties, priceRange, postCode, languages }
 				<MyCheckbox
 					key={duty + new Date().getTime()}
 					skill={duty} checked={duties[duty]}
-					onChange={(checked) => setFilter( { [duty]: checked}, 'duties')}
+					onChange={(checked) => onFilterChanged( { [duty]: checked}, 'duties')}
 				/>
 			)}
 
@@ -29,7 +29,7 @@ const Filter = ({ setFilter, filter: { duties, priceRange, postCode, languages }
 				<MyCheckbox
 					key={lang + new Date().getTime()}
 					skill={lang} checked={languages[lang]}
-					onChange={(checked) => setFilter( { [lang]: checked}, 'languages')}
+					onChange={(checked) => onFilterChanged( { [lang]: checked}, 'languages')}
 				/>
 			)}
 		</div>
@@ -39,8 +39,8 @@ const Filter = ({ setFilter, filter: { duties, priceRange, postCode, languages }
 			<TwoValuesSlider
 				from={priceRange.from}
 				to={priceRange.to}
-				setFrom={(value) => setFilter({from: value}, 'priceRange')}
-				setTo={(value) => setFilter({to: value}, 'priceRange')}
+				setFrom={(value) => onFilterChanged({from: value}, 'priceRange')}
+				setTo={(value) => onFilterChanged({to: value}, 'priceRange')}
 			/>
 		</div>
 		<div className="filterItem">
@@ -50,7 +50,7 @@ const Filter = ({ setFilter, filter: { duties, priceRange, postCode, languages }
 				name="postalCode"
 				type="text"
 				value={postCode}
-				onChange={(e)=> setFilter(e.target.value, 'postCode')} />
+				onChange={(e)=> onFilterChanged(e.target.value, 'postCode')} />
 		</div>
 
 	</div>;

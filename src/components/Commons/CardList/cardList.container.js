@@ -3,10 +3,12 @@ import { withRouter } from 'react-router';
 
 import CardList from './cardList.component';
 
-import data from './mock-data.json';
+import {
+	getAssistants
+} from "../../../state/Assistants/selectors";
 
 const mapStateToProps = (state, ownProps) => ({
-	data
+	assistants: getAssistants(state)
 });
 
 const mapDispatchToProps = {

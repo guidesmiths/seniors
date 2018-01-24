@@ -2,7 +2,7 @@ import { connect } from "react-redux";
 import { withRouter } from 'react-router';
 
 import {
-	setFilter
+	onFilterChanged
 } from "../../../state/Filter/actionCreators";
 
 import {
@@ -16,7 +16,7 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 const mapDispatchToProps = {
-	setFilter
+	onFilterChanged
 };
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Filter));
