@@ -29,31 +29,48 @@ export default class Filter extends React.Component {
 	}
 
 	render() {
+		console.log(this.props);
+		const { duties, priceRange, postCode, languages } = this.props.filter;
+
 		return(
 			<div className="col-md-3 flex flex-1 flex-column filterVerBar">
 				<strong style={{fontSize: '1.5em'}}>¿Cómo es tu ayudante ideal?</strong>
 				<br></br>
 				<div className="filterItem">
 
-					<strong> ¿qué sabe hacer? </strong>
+					<strong> ¿Qué sabe hacer? </strong>
 					<br></br>
-					{Object.keys(this.state.duties).map((duty) =>
+					{Object.keys(duties).map((duty) =>
 						<MyCheckbox
 							key={duty + new Date().getTime()}
-							skill={duty} checked={this.state.duties[duty]}
-							onChange={(checked) => this.selectDuty(duty)}
+							skill={duty} checked={duties[duty]}
+							onChange={(checked) => this.props.setFilter( { [duty]: checked}, 'duties')}
 						/>
 					)}
 
+				</div>
+
+				<div className="filterItem">
+					<strong> ¿Qué idiomas sabe hablar? </strong>
+					<br></br>
+					{Object.keys(languages).map((lang) =>
+						<MyCheckbox
+							key={lang + new Date().getTime()}
+							skill={lang} checked={languages[lang]}
+							onChange={(checked) => this.props.setFilter( { [lang]: checked}, 'languages')}
+						/>
+					)}
+				</div>
+
+				<div className="filterItem">
 					<TwoValuesSlider
 						from={this.state.range.from}
 						to={this.state.range.to}
 						setFrom={(value) => this.setState({ range: { ...this.state.range, from: value} }) }
 						setTo={(value) => this.setState({ range: { ...this.state.range, to: value} }) }
 					/>
-
 				</div>
-
+				
 			</div>
 		);
 	}

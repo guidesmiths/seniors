@@ -5,6 +5,8 @@ import logo from '../../../logo.svg';
 
 import { Button } from 'reactstrap';
 
+import Filter from '../../Commons/Filter/filter.container';
+
 export default class Home extends React.Component {
 	constructor(props){
 		super(props);
@@ -19,16 +21,7 @@ export default class Home extends React.Component {
 		const { value } = this.props;
 		return(
 			<div className="App">
-				<header className="App-header">
-					<img src={logo} className="App-logo" alt="logo" />
-					<h1 className="App-title">Welcome to React</h1>
-				</header>
-				<p className="App-intro">
-					To get started, edit <code>src/App.js</code> and save to reload.
-				</p>
-				<button onClick={()=>this.changeNumber(5)} label="change to 5" />
-				<p>{value}</p>
-				<Button color="danger">Danger!</Button>
+				<Filter />
 			</div>
 		);
 	}

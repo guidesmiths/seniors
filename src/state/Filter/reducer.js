@@ -6,12 +6,12 @@ export default handleActions(
 	{
 		[actions.setFilter]: (state, { payload: { value, type } }) => {
 			const reducerByType = {
-				duties: () => ({ ...state.duties, value }),
-				languages: () => ({ ...state.languages, value }),
+				duties: () => ({ ...state.duties, ...value }),
+				languages: () => ({ ...state.languages, ...value }),
 				postCode: () => ({ postCode: value }),
-				priceRange: () => ({ ...stage.priceRange, value })
+				priceRange: () => ({ ...state.priceRange, ...value })
 			};
-			return { ...state,  ...reducerByType[type]() || {}};
+			return { ...state,  [type]: reducerByType[type]() || {}};
 		}
 	},
 	initialState
