@@ -3,7 +3,7 @@ import StoryRouter from 'storybook-router';
 import { storiesOf } from '@storybook/react';
 import { Provider } from 'react-redux';
 
-import Filter from './filter.component.js';
+import Filter from './filter.container.js';
 
 import configureStore from '../../../configureStore';
 

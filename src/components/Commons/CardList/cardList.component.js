@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./cardList.css";
-import Card from "../Card/card.component";
+import Card from "../Card/card.container";
 
 export default class CardList extends React.Component {
 
@@ -11,18 +11,10 @@ export default class CardList extends React.Component {
 	}
 
 	render(){
+		console.log(this.props);
 		return(
-			<div>
-				<p>asdsa {this.props.assistants.length} </p>
-				{
-					this.props.assistants.map((as, i)=><Card key={as.id} assistant={as} />)
-				}
-				{	false &&
-					this.props.assistants.length > 0 &&
-					this.props.assistants.map((assistant) => 
-						<Card id={'assistant'} key={'assistant' + new Date().getTime()} assistant={assistant} />
-					)
-				}
+			<div>	
+				{this.props.assistants.map((as, i)=><Card key={as.id} assistant={as} />)}
 			</div>
 		);
 	}

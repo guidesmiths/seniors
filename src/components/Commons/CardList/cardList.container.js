@@ -8,7 +8,7 @@ import {
 } from "../../../state/Assistants/selectors";
 
 const mapStateToProps = (state, ownProps) => ({
-	assistants: getAssistants(state)
+	//assistants: getAssistants(state)
 });
 
 const mapDispatchToProps = {
