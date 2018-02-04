@@ -13,7 +13,7 @@ export default class Card extends React.Component {
 
 	render(){
 		console.log(this.props.personal);
-		const { personal, price, skills, score } = this.props;
+		const { personal, price, skills, score } = this.props.assistant;
 		return(
 			<div key={personal.id} className="col-md-8 cardItem flex">
 				<div className="flex flex-1 flex-column">
