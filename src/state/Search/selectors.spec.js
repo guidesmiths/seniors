@@ -1,11 +1,11 @@
 import * as selectors from "./selectors";
 import initialState from "./initial.state";
 
-describe("selectors Home", () => {
+describe("selectors search", () => {
 
 	const state = {
 		root: {
-			home: {
+			search: {
 				value: 5
 			}
 		}
@@ -13,7 +13,7 @@ describe("selectors Home", () => {
 
 	test("value", () => {
 		expect(selectors.getValue(state)).toEqual(
-			state.root.home.value
+			state.root.search.value
 		);
 	});
 

@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./home.css";
+import "./search.css";
 import logo from '../../../logo.svg';
 
 import { Button } from 'reactstrap';
@@ -8,7 +8,7 @@ import { Button } from 'reactstrap';
 import Filter from '../../Commons/Filter/filter.container';
 import CardList from '../../Commons/CardList/cardList.container';
 
-export default class Home extends React.Component {
+export default class Search extends React.Component {
 	constructor(props){
 		super(props);
 		this.state = {};
@@ -30,7 +30,7 @@ export default class Home extends React.Component {
 
 }
 
-Home.propTypes = {
+Search.propTypes = {
 	value: PropTypes.number,
 	setValue: PropTypes.func
 };

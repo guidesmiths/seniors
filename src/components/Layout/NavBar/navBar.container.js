@@ -3,11 +3,11 @@ import { withRouter } from 'react-router';
 
 import {
 	getValue
-} from "../../../state/Home/selectors";
+} from "../../../state/Search/selectors";
 
 import {
 	setValue
-} from "../../../state/Home/actionCreators";
+} from "../../../state/Search/actionCreators";
 
 import {
 	logoutSubmit

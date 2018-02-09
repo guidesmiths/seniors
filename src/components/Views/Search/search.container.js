@@ -3,13 +3,13 @@ import { withRouter } from 'react-router';
 
 import {
 	getValue
-} from "../../../state/Home/selectors";
+} from "../../../state/Search/selectors";
 
 import {
 	setValue
-} from "../../../state/Home/actionCreators";
+} from "../../../state/Search/actionCreators";
 
-import Home from './home.component';
+import Search from './search.component';
 
 const mapStateToProps = (state, ownProps) => ({
 	location: ownProps.location,
@@ -20,4 +20,4 @@ const mapDispatchToProps = {
 	setValue
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Home));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Search));

@@ -1,7 +1,7 @@
 import * as selectors from "./selectors";
 import initialState from "./initial.state";
 
-describe("selectors Home", () => {
+describe("selectors Search", () => {
 
 	const state = {
 		root: {
