@@ -90,6 +90,7 @@ color: #fff;
 margin-left: auto;
 margin-right: auto;
 margin-bottom: 30px;
+cursor: pointer;
 `;
 
 const HomeFooter = styled.div`
