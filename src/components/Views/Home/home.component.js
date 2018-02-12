@@ -29,10 +29,10 @@ export default class Home extends React.Component {
 					<Title>Seniors</Title>
 					<p>Welcome to the first application that cares about what you care. Find the best caregivers for your elderlies when you can not look after them yourselve</p>
 				</Hero>
-        <Filter>
-        <Input />
-        <Input />
-        </Filter>
+				<Filter>
+					<Input />
+					<Input />
+				</Filter>
 			</div>
 
 		);
