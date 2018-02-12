@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./home.css";
 import styled from 'styled-components';
-import {Header, Hero, Title, Text, MenuItem} from './home.component1';
+import {Header, Hero, Title, Text, MenuItem, Input, Filter} from './home.component1';
 import logo from '../../../img/logo.svg';
 
 export default class Home extends React.Component {
@@ -18,9 +18,9 @@ export default class Home extends React.Component {
 				<Header>
 					<img src={logo} alt="logo" height="80vh"/>
 					<nav>
-						<ul>
+						<ul className='no-decoration'>
 							<MenuItem>
-								<a href="/html/" >Entrar</a>
+								<a href="/html/" className= 'hero'>Entrar</a>
 							</MenuItem>
 						</ul>
 					</nav>
@@ -29,7 +29,12 @@ export default class Home extends React.Component {
 					<Title>Seniors</Title>
 					<p>Welcome to the first application that cares about what you care. Find the best caregivers for your elderlies when you can not look after them yourselve</p>
 				</Hero>
+        <Filter>
+        <Input />
+        <Input />
+        </Filter>
 			</div>
+
 		);
 	}
 

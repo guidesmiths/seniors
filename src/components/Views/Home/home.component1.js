@@ -37,6 +37,18 @@ const Title = styled.h1 `
 font-size: 60px;
 `;
 
+const Filter = styled.div `
+background-color: white;
+padding: 48px;
+text-align: center;
+`;
+
+const Input = styled.input `
+margin-bottom:12px;
+border: 1px solid #24b8ca;
+padding-top: 8px;
+padding-right: 8px;
+`;
 
 
 
@@ -44,3 +56,5 @@ export {Hero};
 export {Header};
 export {Title};
 export {MenuItem};
+export {Input};
+export {Filter};

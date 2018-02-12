@@ -1,4 +1,9 @@
 
 .hero {
   color: white;
+  font-size: 16px;
+}
+
+.no-decoration {
+  list-style:none
 }
