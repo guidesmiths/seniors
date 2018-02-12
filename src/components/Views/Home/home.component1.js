@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import hero from '../../../img/hero.jpg'
+import hero from '../../../img/hero.jpg';
 
 
 
