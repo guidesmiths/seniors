@@ -47,6 +47,8 @@ export default class Home extends React.Component {
 								<img src={IconB} />
 							</Item30>
 						</SmallContent>
+					</MediumContent>
+					<MediumContent>
 						<SmallContent>
 							<Item30>
 								<img src={IconC} />

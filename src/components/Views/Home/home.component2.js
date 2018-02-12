@@ -13,7 +13,7 @@ background: pink;
 
 const MainContent = styled.div`
 width: 100%;
-background: #24b8ca;
+background: #B0E0E6;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -21,18 +21,21 @@ justify-content: center;
 `;
 
 const MediumContent = styled.div`
-background: #24b8ca;
+background: #B0E0E6;
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
 margin: 10px;
-width: 90%
+width: 90%;
+@media (min-width: 500px) {
+    flex-direction: row;
+  }
 `;
 
 const SmallContent = styled.div`
 width: 100%;
-background: #24b8ca;
+background: #B0E0E6;
 display: flex;
 flex-direction: row;
 align-items: center;
@@ -40,12 +43,12 @@ justify-content: center;
 `;
 
 const Item30 = styled.div`
-background: #24b8ca;
+background: #B0E0E6;
 width: 20%;
 `;
 
 const Item70 = styled.div`
-background: #24b8ca;
+background: #B0E0E6;
 width: 80%;
 text-align: center;
 padding: 10px;
