@@ -22,7 +22,7 @@ const MainLayoutRouter = () => (
 			<Route path='/blog' component={Blog} />
 			<Route path='/search' component={Search} />
 		</Switch>
-	</MainLayout>
+	</ MainLayout>
 );
 
 export default MainLayoutRouter;
