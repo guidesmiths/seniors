@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./home.css";
 import styled from 'styled-components';
-import {TitleHome, Hero, MainContent, MediumContent, SmallContent, Item30, Item70, ButtonHome, SentencesTextRight, SentencesTextLeft, SentencesTextLeftBold, SentencesTextRightBold, HomeFooter} from './home.component2';
+import {MainContainer, MediumContainer, SmallContainer, ItemIcon, ItemReason, ButtonHome, ReasonTextRight, ReasonTextLeft, ReasonTextLeftBold, ReasonTextRightBold, HomeFooter} from './home.component2';
 import IconA from '../../../img/icon-a.svg';
 import IconB from '../../../img/icon-b.svg';
 import IconC from '../../../img/icon-c.svg';
@@ -19,65 +19,65 @@ export default class Home extends React.Component {
 	render(){
 		return(
 			<div>
-				<MainContent>
-					<MediumContent>
-						<SmallContent>
-							<Item30>
+				<MainContainer>
+					<MediumContainer>
+						<SmallContainer>
+							<ItemIcon>
 								<img src={IconA} />
-							</Item30>
-							<Item70>
-								<SentencesTextLeftBold>
+							</ItemIcon>
+							<ItemReason>
+								<ReasonTextLeftBold>
 								Lorem ipsum
-								</SentencesTextLeftBold>
-								<SentencesTextLeft>
+								</ReasonTextLeftBold>
+								<ReasonTextLeft>
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit
-								</SentencesTextLeft>
-							</Item70>
-						</SmallContent>
-						<SmallContent>
-							<Item70>
-								<SentencesTextRightBold>
+								</ReasonTextLeft>
+							</ItemReason>
+						</SmallContainer>
+						<SmallContainer>
+							<ItemReason>
+								<ReasonTextRightBold>
 								Lorem ipsum
-								</SentencesTextRightBold>
-								<SentencesTextRight>
+								</ReasonTextRightBold>
+								<ReasonTextRight>
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit
-								</SentencesTextRight>
-							</Item70>
-							<Item30>
+								</ReasonTextRight>
+							</ItemReason>
+							<ItemIcon>
 								<img src={IconB} />
-							</Item30>
-						</SmallContent>
-					</MediumContent>
-					<MediumContent>
-						<SmallContent>
-							<Item30>
+							</ItemIcon>
+						</SmallContainer>
+					</MediumContainer>
+					<MediumContainer>
+						<SmallContainer>
+							<ItemIcon>
 								<img src={IconC} />
-							</Item30>
-							<Item70>
-								<SentencesTextLeftBold>
+							</ItemIcon>
+							<ItemReason>
+								<ReasonTextLeftBold>
 								Lorem ipsum
-								</SentencesTextLeftBold>
-								<SentencesTextLeft>
+								</ReasonTextLeftBold>
+								<ReasonTextLeft>
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit
-								</SentencesTextLeft>
-							</Item70>
-						</SmallContent>
-						<SmallContent>
-							<Item70>
-								<SentencesTextRightBold>
+								</ReasonTextLeft>
+							</ItemReason>
+						</SmallContainer>
+						<SmallContainer>
+							<ItemReason>
+								<ReasonTextRightBold>
 								Lorem ipsum
-								</SentencesTextRightBold>
-								<SentencesTextRight>
+								</ReasonTextRightBold>
+								<ReasonTextRight>
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit
-								</SentencesTextRight>
-							</Item70>
-							<Item30>
+								</ReasonTextRight>
+							</ItemReason>
+							<ItemIcon>
 								<img src={IconD} />
-							</Item30>
-						</SmallContent>
-					</MediumContent>
+							</ItemIcon>
+						</SmallContainer>
+					</MediumContainer>
 					<ButtonHome>Más</ButtonHome>
-				</MainContent>
+				</MainContainer>
 				<HomeFooter>
 				Senior &copy; 2018 Politica de cookies
 				</HomeFooter>

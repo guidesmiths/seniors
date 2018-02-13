@@ -1,17 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-const TitleHome = styled.h1`
-color: blue;
-font-size: 100px;
-`;
-
-const Hero = styled.div`
-height: 80vh;
-background: pink;
-`;
-
-const MainContent = styled.div`
+const MainContainer = styled.div`
 width: 100%;
 background: #B0E0E6;
 display: flex;
@@ -20,7 +10,7 @@ align-items: center;
 justify-content: center;
 `;
 
-const MediumContent = styled.div`
+const MediumContainer = styled.div`
 background: #B0E0E6;
 display: flex;
 flex-direction: column;
@@ -33,7 +23,7 @@ width: 90%;
   }
 `;
 
-const SmallContent = styled.div`
+const SmallContainer = styled.div`
 width: 100%;
 background: #B0E0E6;
 display: flex;
@@ -42,19 +32,19 @@ align-items: center;
 justify-content: center;
 `;
 
-const Item30 = styled.div`
+const ItemIcon = styled.div`
 background: #B0E0E6;
 width: 20%;
 `;
 
-const Item70 = styled.div`
+const ItemReason = styled.div`
 background: #B0E0E6;
 width: 80%;
 text-align: center;
 padding: 10px;
 `;
 
-const SentencesTextRight= styled.p`
+const ReasonTextRight= styled.p`
 font-family: 'Open Sans', sans-serif;
 font-size: 12px;
 letter-spacing: -0.1px;
@@ -62,12 +52,12 @@ color: #031416;
 text-align: right;
 `;
 
-const SentencesTextRightBold = SentencesTextRight.extend`
+const ReasonTextRightBold = ReasonTextRight.extend`
 font-weight: bold;
 margin-bottom: 4px;
 `;
 
-const SentencesTextLeft= styled.p`
+const ReasonTextLeft= styled.p`
 font-family: 'Open Sans', sans-serif;
 font-size: 12px;
 letter-spacing: -0.1px;
@@ -75,7 +65,7 @@ color: #031416;
 text-align: left;
 `;
 
-const SentencesTextLeftBold = SentencesTextLeft.extend`
+const ReasonTextLeftBold = ReasonTextLeft.extend`
 font-weight: bold;
 margin-bottom: 4px;
 `;
@@ -105,16 +95,14 @@ text-align: center;
 line-height: 92px;
 `;
 
-export {TitleHome};
-export {Hero};
-export {MainContent};
-export {MediumContent};
-export {SmallContent};
-export {Item30};
-export {Item70};
+export {MainContainer};
+export {MediumContainer};
+export {SmallContainer};
+export {ItemIcon};
+export {ItemReason};
 export {ButtonHome};
-export {SentencesTextRight};
-export {SentencesTextLeft};
-export {SentencesTextRightBold};
-export {SentencesTextLeftBold};
+export {ReasonTextRight};
+export {ReasonTextLeft};
+export {ReasonTextRightBold};
+export {ReasonTextLeftBold};
 export {HomeFooter};
