@@ -45,8 +45,8 @@ padding: 10px;
 `;
 
 const ReasonTextRight= styled.p`
-font-family: 'Open Sans', sans-serif;
-font-size: 12px;
+
+
 letter-spacing: -0.1px;
 color: #031416;
 text-align: right;
@@ -59,7 +59,6 @@ margin-bottom: 4px;
 
 const ReasonTextLeft= styled.p`
 font-family: 'Open Sans', sans-serif;
-font-size: 12px;
 letter-spacing: -0.1px;
 color: #031416;
 text-align: left;
@@ -70,7 +69,7 @@ font-weight: bold;
 margin-bottom: 4px;
 `;
 
-const ButtonHome = styled.button`
+const Button = styled.button`
 background: #e81e7c;
 border: 2px solid #e81e7c;
 width: 128px;
@@ -88,7 +87,6 @@ background: #031416;
 width: 100%;
 height: 92px;
 text-weight: 600;
-font-size: 12px;
 letter-spacing: -0.1px;
 color: #fff;
 text-align: center;
@@ -100,7 +98,7 @@ export {MediumContainer};
 export {SmallContainer};
 export {ItemIcon};
 export {ItemReason};
-export {ButtonHome};
+export {Button};
 export {ReasonTextRight};
 export {ReasonTextLeft};
 export {ReasonTextRightBold};

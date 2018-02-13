@@ -1,0 +1,14 @@
+
+.hero {
+  color: white;
+  font-size: 12px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.no-decoration {
+  list-style:none
+}
+
+.fullscreen {
+  height: 100vh;
+}
