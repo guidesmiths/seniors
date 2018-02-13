@@ -46,6 +46,13 @@ const InputContainer = styled.div `
 background-color: white;
 padding: 36px 48px 0;
 text-align: center;
+@media (min-width: 500px) {
+    width:80%;
+    margin-left: auto;
+    margin-right:auto;
+    margin-top:-20px;
+    }
+
 `;
 
 const Input = styled.input `
@@ -98,8 +105,6 @@ padding: 10px;
 `;
 
 const ReasonTextRight= styled.p`
-
-
 letter-spacing: -0.1px;
 color: #031416;
 text-align: right;
