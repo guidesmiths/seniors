@@ -85,7 +85,7 @@ width: 90%;
 `;
 
 const SmallContainer = styled.div`
-width: 100%;
+width: 80%;
 background: #B0E0E6;
 display: flex;
 flex-direction: row;
