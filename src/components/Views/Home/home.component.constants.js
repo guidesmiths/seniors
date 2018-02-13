@@ -20,6 +20,9 @@ color: white;
 font-weight:bold;
 font-size:12px;
 letter-spacing:-0.1px;
+@media (min-width: 500px) {
+  font-size: 16px;
+    }
 `;
 
 const Hero = styled.div`
@@ -40,17 +43,24 @@ const Title = styled.h1 `
 font-size: 36px;
 font-weight:bold;
 letter-spacing:-0.4px;
+@media (min-width: 500px) {
+  font-size: 72px;
+    }
 `;
 
 const InputContainer = styled.div `
+display: flex;
+flex-direction: column;
 background-color: white;
-padding: 36px 48px 0;
+padding: 36px 64px 0;
 text-align: center;
 @media (min-width: 500px) {
-    width:80%;
+    width:704px;
+    padding: 46px 52px 0;
     margin-left: auto;
     margin-right:auto;
-    margin-top:-20px;
+    margin-top:-60px;
+    box-shadow: 0px 3px 7px 0 rgba(0, 0, 0, 0.36);
     }
 
 `;
@@ -59,8 +69,17 @@ const Input = styled.input `
 margin-bottom:12px;
 border: 1px solid #24b8ca;
 padding-top: 8px;
-padding-right: 8px;
 `;
+
+const Select = styled.select `
+background-color: white;
+margin-bottom:12px;
+border: 1px solid #24b8ca;
+padding-left: 15px;
+padding-top: 4px;
+padding-bottom: 4px;
+`;
+
 const MainContainer = styled.div`
 width: 100%;
 background: #B0E0E6;
@@ -68,6 +87,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
+
 `;
 
 const MediumContainer = styled.div`
@@ -168,3 +188,4 @@ export {Title};
 export {MenuItem};
 export {Input};
 export {InputContainer};
+export {Select};
