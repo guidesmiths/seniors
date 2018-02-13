@@ -2,12 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./home.css";
 import styled from 'styled-components';
-import {MainContainer, MediumContainer, SmallContainer, ItemIcon, ItemReason, Button, ReasonTextRight, ReasonTextLeft, ReasonTextLeftBold, ReasonTextRightBold, HomeFooter} from './home.component2';
 import IconA from '../../../img/icon-a.svg';
 import IconB from '../../../img/icon-b.svg';
 import IconC from '../../../img/icon-c.svg';
 import IconD from '../../../img/icon-d.svg';
-import {Header, Hero, Title, Text, MenuItem, Input, InputContainer} from './home.component1';
+import {Header, Hero, Title, Text, MenuItem, Input, InputContainer, MainContainer, MediumContainer, SmallContainer, ItemIcon, ItemReason, Button, ReasonTextRight, ReasonTextLeft, ReasonTextLeftBold, ReasonTextRightBold, HomeFooter} from './home.component.constants';
 import logo from '../../../img/logo.svg';
 
 
@@ -32,18 +31,16 @@ export default class Home extends React.Component {
 						</ul>
 					</nav>
 				</Header>
-				<div className= "fullscreen">
-					<Hero>
-						<Title>Seniors</Title>
-						<p>Welcome to the first application that cares about what you care. Find the best caregivers for your elderlies.</p>
-					</Hero>
-					<InputContainer>
-						<Input />
-						<Input />
-						<Button>Buscar</Button>
-					</InputContainer>
 
-				</div>
+				<Hero>
+					<Title>Seniors</Title>
+					<p>Welcome to the first application that cares about what you care. Find the best caregivers for your elderlies.</p>
+				</Hero>
+				<InputContainer>
+					<Input />
+					<Input />
+					<Button>Buscar</Button>
+				</InputContainer>
 				<div>
 					<MainContainer>
 						<MediumContainer>
