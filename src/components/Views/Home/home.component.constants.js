@@ -96,6 +96,9 @@ justify-content: center;
 const ItemIcon = styled.div`
 background: #B0E0E6;
 width: 20%;
+@media (min-width: 500px) {
+    width: 15%;
+  }
 `;
 
 const ItemReason = styled.div`
