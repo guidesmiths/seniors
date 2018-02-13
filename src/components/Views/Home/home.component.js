@@ -1,36 +1,123 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./home.css";
-import logo from '../../../logo.svg';
+import styled from 'styled-components';
+import IconA from '../../../img/icon-a.svg';
+import IconB from '../../../img/icon-b.svg';
+import IconC from '../../../img/icon-c.svg';
+import IconD from '../../../img/icon-d.svg';
+import {Header, Hero, Title, Text, MenuItem, Input, InputContainer, ReasonsContainer, MainContainer, MediumContainer, SmallContainer, ItemIcon, ItemReason, Button, ReasonTextRight, ReasonTextLeft, ReasonTextLeftBold, ReasonTextRightBold, HomeFooter, HomeFooterItem1, HomeFooterItem2} from './home.component.constants';
+import logo from '../../../img/logo.svg';
 
-import { Button } from 'reactstrap';
-
-import Filter from '../../Commons/Filter/filter.container';
-import CardList from '../../Commons/CardList/cardList.container';
 
 export default class Home extends React.Component {
+
 	constructor(props){
 		super(props);
 		this.state = {};
 	}
 
-	changeNumber = (value) => {
-		this.props.setValue(value);
-	}
-
 	render(){
-		const { value } = this.props;
 		return(
-			<div className="App">
-				<Filter />
-				<CardList />
+
+			<div className= 'hero'>
+				<Header>
+					<img src={logo} alt="logo" height="50vh"/>
+					<nav>
+						<ul className='no-decoration'>
+							<MenuItem>
+								<a href="/html/" className= 'hero'>Entrar</a>
+							</MenuItem>
+						</ul>
+					</nav>
+				</Header>
+
+				<Hero>
+					<Title>Seniors</Title>
+					<p>Welcome to the first application that cares about what you care. Find the best caregivers for your elderlies.</p>
+				</Hero>
+				<InputContainer>
+					<Input />
+					<Input />
+					<Button>Buscar</Button>
+				</InputContainer>
+				<div>
+					<ReasonsContainer>
+						<MainContainer>
+							<MediumContainer>
+								<SmallContainer>
+									<ItemIcon>
+										<img src={IconA} />
+									</ItemIcon>
+									<ItemReason>
+										<ReasonTextLeftBold>
+								Lorem ipsum
+										</ReasonTextLeftBold>
+										<ReasonTextLeft>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit
+										</ReasonTextLeft>
+									</ItemReason>
+								</SmallContainer>
+								<SmallContainer>
+									<ItemReason>
+										<ReasonTextRightBold>
+								Lorem ipsum
+										</ReasonTextRightBold>
+										<ReasonTextRight>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit
+										</ReasonTextRight>
+									</ItemReason>
+									<ItemIcon>
+										<img src={IconB} />
+									</ItemIcon>
+								</SmallContainer>
+							</MediumContainer>
+							<MediumContainer>
+								<SmallContainer>
+									<ItemIcon>
+										<img src={IconC} />
+									</ItemIcon>
+									<ItemReason>
+										<ReasonTextLeftBold>
+								Lorem ipsum
+										</ReasonTextLeftBold>
+										<ReasonTextLeft>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit
+										</ReasonTextLeft>
+									</ItemReason>
+								</SmallContainer>
+								<SmallContainer>
+									<ItemReason>
+										<ReasonTextRightBold>
+								Lorem ipsum
+										</ReasonTextRightBold>
+										<ReasonTextRight>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit
+										</ReasonTextRight>
+									</ItemReason>
+									<ItemIcon>
+										<img src={IconD} />
+									</ItemIcon>
+								</SmallContainer>
+							</MediumContainer>
+						</MainContainer>
+						<Button>Más</Button>
+					</ReasonsContainer>
+					<HomeFooter>
+						<HomeFooterItem1>
+					Política de cookies
+						</HomeFooterItem1>
+						<HomeFooterItem2>
+					Seniors &copy; 2018
+						</HomeFooterItem2>
+					</HomeFooter>
+				</div>
+
 			</div>
+
 		);
 	}
-
 }
 
 Home.propTypes = {
-	value: PropTypes.number,
-	setValue: PropTypes.func
 };
