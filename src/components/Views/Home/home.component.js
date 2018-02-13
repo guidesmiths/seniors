@@ -6,7 +6,7 @@ import IconA from '../../../img/icon-a.svg';
 import IconB from '../../../img/icon-b.svg';
 import IconC from '../../../img/icon-c.svg';
 import IconD from '../../../img/icon-d.svg';
-import {Header, Hero, Title, Text, MenuItem, Input,Select, InputContainer, ReasonsContainer, MainContainer, MediumContainer, SmallContainer, ItemIcon, ItemReason, Button, ReasonTextRight, ReasonTextLeft, ReasonTextLeftBold, ReasonTextRightBold, HomeFooter, HomeFooterItem1, HomeFooterItem2} from './home.component.constants';
+import {Header, Hero, Title, Text, MenuItem, Input,Select, InputContainer, ReasonsContainer, MainContainer, MediumContainer, SmallContainer, ItemIcon, ItemReason, Button1, Button2, ReasonTextRight, ReasonTextLeft, ReasonTextLeftBold, ReasonTextRightBold, HomeFooter, HomeFooterItem1, HomeFooterItem2} from './home.component.constants';
 import logo from '../../../img/logo.svg';
 
 
@@ -43,7 +43,7 @@ export default class Home extends React.Component {
 						<option value="Score">Filtrar por valoración</option>
 					</Select>
 					<Input />
-					<Button>Buscar</Button>
+					<Button1>Buscar</Button1>
 				</InputContainer>
 				<div>
 					<ReasonsContainer>
@@ -105,7 +105,7 @@ export default class Home extends React.Component {
 								</SmallContainer>
 							</MediumContainer>
 						</MainContainer>
-						<Button>Más</Button>
+						<Button2>Más</Button2>
 					</ReasonsContainer>
 					<HomeFooter>
 						<HomeFooterItem1>

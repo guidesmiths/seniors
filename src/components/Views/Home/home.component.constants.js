@@ -160,8 +160,7 @@ export const ReasonTextLeftBold = ReasonTextLeft.extend`
 font-weight: bold;
 margin-bottom: 4px;
 `;
-
-export const Button = styled.button`
+export const Button1 = styled.button`
 background: #e81e7c;
 border: 2px solid #e81e7c;
 width: 128px;
@@ -174,6 +173,14 @@ cursor: pointer;
 display: block;
 @media (min-width: 500px) {
    font-size: 16px;
+   margin:0;
+ }
+`;
+
+export const Button2 = Button1.extend`
+@media (min-width: 500px) {
+  margin-left: auto;
+  margin-right: auto;
  }
 `;
 
