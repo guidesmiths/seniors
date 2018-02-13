@@ -55,7 +55,9 @@ background-color: white;
 padding: 36px 64px 0;
 text-align: center;
 @media (min-width: 500px) {
-    width:704px;
+    z-index: 10;
+    width:80vw;
+    flex-direction: row;
     padding: 46px 52px 0;
     margin-left: auto;
     margin-right:auto;
@@ -74,6 +76,7 @@ padding-top: 8px;
 const Select = styled.select `
 background-color: white;
 margin-bottom:12px;
+margin-right:12px;
 border: 1px solid #24b8ca;
 padding-left: 15px;
 padding-top: 4px;
