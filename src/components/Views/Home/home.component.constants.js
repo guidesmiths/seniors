@@ -46,6 +46,7 @@ const InputContainer = styled.div `
 background-color: white;
 padding: 36px 48px 0;
 text-align: center;
+padding-bottom: 40px;
 `;
 
 const Input = styled.input `
@@ -54,6 +55,13 @@ border: 1px solid #24b8ca;
 padding-top: 8px;
 padding-right: 8px;
 `;
+
+const ReasonsContainer = styled.div`
+width: 100%;
+background: #B0E0E6;
+padding-bottom: 30px;
+`;
+
 const MainContainer = styled.div`
 width: 100%;
 background: #B0E0E6;
@@ -61,6 +69,9 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
+@media (min-width: 500px) {
+    flex-direction: row;
+  }
 `;
 
 const MediumContainer = styled.div`
@@ -71,9 +82,6 @@ align-items: center;
 justify-content: center;
 margin: 10px;
 width: 90%;
-@media (min-width: 500px) {
-    flex-direction: row;
-  }
 `;
 
 const SmallContainer = styled.div`
@@ -98,8 +106,6 @@ padding: 10px;
 `;
 
 const ReasonTextRight= styled.p`
-
-
 letter-spacing: -0.1px;
 color: #031416;
 text-align: right;
@@ -131,21 +137,40 @@ text-weight: bold;
 color: #fff;
 margin-left: auto;
 margin-right: auto;
-margin-bottom: 30px;
 cursor: pointer;
+display: block;
+@media (min-width: 500px) {
+    font-size: 16px;
+  }
 `;
 
 const HomeFooter = styled.div`
 background: #031416;
 width: 100%;
 height: 92px;
-text-weight: 600;
-letter-spacing: -0.1px;
-color: #fff;
-text-align: center;
-line-height: 92px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 `;
 
+const HomeFooterItem1 = styled.div`
+text-weight: 600;
+font-size: 12px;
+letter-spacing: -0.1px;
+color: #fff;
+`;
+
+const HomeFooterItem2 = styled.div`
+text-weight: 600;
+font-size: 10px;
+letter-spacing: -0.1px;
+color: #fff;
+`;
+
+
+
+export {ReasonsContainer};
 export {MainContainer};
 export {MediumContainer};
 export {SmallContainer};
@@ -157,6 +182,8 @@ export {ReasonTextLeft};
 export {ReasonTextRightBold};
 export {ReasonTextLeftBold};
 export {HomeFooter};
+export {HomeFooterItem1};
+export {HomeFooterItem2};
 export {Hero};
 export {Header};
 export {Title};

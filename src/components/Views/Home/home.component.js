@@ -6,7 +6,7 @@ import IconA from '../../../img/icon-a.svg';
 import IconB from '../../../img/icon-b.svg';
 import IconC from '../../../img/icon-c.svg';
 import IconD from '../../../img/icon-d.svg';
-import {Header, Hero, Title, Text, MenuItem, Input, InputContainer, MainContainer, MediumContainer, SmallContainer, ItemIcon, ItemReason, Button, ReasonTextRight, ReasonTextLeft, ReasonTextLeftBold, ReasonTextRightBold, HomeFooter} from './home.component.constants';
+import {Header, Hero, Title, Text, MenuItem, Input, InputContainer, ReasonsContainer, MainContainer, MediumContainer, SmallContainer, ItemIcon, ItemReason, Button, ReasonTextRight, ReasonTextLeft, ReasonTextLeftBold, ReasonTextRightBold, HomeFooter, HomeFooterItem1, HomeFooterItem2} from './home.component.constants';
 import logo from '../../../img/logo.svg';
 
 
@@ -42,67 +42,74 @@ export default class Home extends React.Component {
 					<Button>Buscar</Button>
 				</InputContainer>
 				<div>
-					<MainContainer>
-						<MediumContainer>
-							<SmallContainer>
-								<ItemIcon>
-									<img src={IconA} />
-								</ItemIcon>
-								<ItemReason>
-									<ReasonTextLeftBold>
+					<ReasonsContainer>
+						<MainContainer>
+							<MediumContainer>
+								<SmallContainer>
+									<ItemIcon>
+										<img src={IconA} />
+									</ItemIcon>
+									<ItemReason>
+										<ReasonTextLeftBold>
 								Lorem ipsum
-									</ReasonTextLeftBold>
-									<ReasonTextLeft>
+										</ReasonTextLeftBold>
+										<ReasonTextLeft>
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit
-									</ReasonTextLeft>
-								</ItemReason>
-							</SmallContainer>
-							<SmallContainer>
-								<ItemReason>
-									<ReasonTextRightBold>
+										</ReasonTextLeft>
+									</ItemReason>
+								</SmallContainer>
+								<SmallContainer>
+									<ItemReason>
+										<ReasonTextRightBold>
 								Lorem ipsum
-									</ReasonTextRightBold>
-									<ReasonTextRight>
+										</ReasonTextRightBold>
+										<ReasonTextRight>
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit
-									</ReasonTextRight>
-								</ItemReason>
-								<ItemIcon>
-									<img src={IconB} />
-								</ItemIcon>
-							</SmallContainer>
-						</MediumContainer>
-						<MediumContainer>
-							<SmallContainer>
-								<ItemIcon>
-									<img src={IconC} />
-								</ItemIcon>
-								<ItemReason>
-									<ReasonTextLeftBold>
+										</ReasonTextRight>
+									</ItemReason>
+									<ItemIcon>
+										<img src={IconB} />
+									</ItemIcon>
+								</SmallContainer>
+							</MediumContainer>
+							<MediumContainer>
+								<SmallContainer>
+									<ItemIcon>
+										<img src={IconC} />
+									</ItemIcon>
+									<ItemReason>
+										<ReasonTextLeftBold>
 								Lorem ipsum
-									</ReasonTextLeftBold>
-									<ReasonTextLeft>
+										</ReasonTextLeftBold>
+										<ReasonTextLeft>
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit
-									</ReasonTextLeft>
-								</ItemReason>
-							</SmallContainer>
-							<SmallContainer>
-								<ItemReason>
-									<ReasonTextRightBold>
+										</ReasonTextLeft>
+									</ItemReason>
+								</SmallContainer>
+								<SmallContainer>
+									<ItemReason>
+										<ReasonTextRightBold>
 								Lorem ipsum
-									</ReasonTextRightBold>
-									<ReasonTextRight>
+										</ReasonTextRightBold>
+										<ReasonTextRight>
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit
-									</ReasonTextRight>
-								</ItemReason>
-								<ItemIcon>
-									<img src={IconD} />
-								</ItemIcon>
-							</SmallContainer>
-						</MediumContainer>
+										</ReasonTextRight>
+									</ItemReason>
+									<ItemIcon>
+										<img src={IconD} />
+									</ItemIcon>
+								</SmallContainer>
+							</MediumContainer>
+						</MainContainer>
 						<Button>Más</Button>
-					</MainContainer>
+					</ReasonsContainer>
 					<HomeFooter>
-				Senior &copy; 2018 Politica de cookies
+						<HomeFooterItem1>
+					Política de cookies
+						</HomeFooterItem1>
+						<HomeFooterItem2>
+					Seniors &copy; 2018
+						</HomeFooterItem2>
 					</HomeFooter>
 				</div>
 
