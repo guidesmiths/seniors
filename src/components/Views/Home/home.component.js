@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./home.css";
 import styled from 'styled-components';
-import {Header, Hero, Title, Text, MenuItem, Input, Filter} from './home.component1';
+import {Header, Hero, Title, Text, MenuItem, Input, InputContainer} from './home.component1';
 import logo from '../../../img/logo.svg';
 
 export default class Home extends React.Component {
@@ -29,10 +29,10 @@ export default class Home extends React.Component {
 					<Title>Seniors</Title>
 					<p>Welcome to the first application that cares about what you care. Find the best caregivers for your elderlies when you can not look after them yourselve</p>
 				</Hero>
-				<Filter>
+				<InputContainer>
 					<Input />
 					<Input />
-				</Filter>
+				</InputContainer>
 			</div>
 
 		);

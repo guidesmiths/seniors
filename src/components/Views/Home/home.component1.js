@@ -37,7 +37,7 @@ const Title = styled.h1 `
 font-size: 60px;
 `;
 
-const Filter = styled.div `
+const InputContainer = styled.div `
 background-color: white;
 padding: 48px;
 text-align: center;
@@ -57,4 +57,4 @@ export {Header};
 export {Title};
 export {MenuItem};
 export {Input};
-export {Filter};
+export {InputContainer};
