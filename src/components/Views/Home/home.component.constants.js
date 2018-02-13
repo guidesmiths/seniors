@@ -2,9 +2,12 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import hero from '../../../img/hero.jpg';
 
+const colors = {
+	primary: '#24b8ca',
+	secondary: '#B0E0E6'
+};
 
-
-const Header = styled.div`
+export const Header = styled.div`
 padding: 12px 16px;
 position: fixed;
 display: flex;
@@ -14,7 +17,7 @@ width: 100%;
 background-color: transparent;
 `;
 
-const MenuItem = styled.li `
+export const MenuItem = styled.li `
 text-decoration: none;
 color: white;
 font-weight:bold;
@@ -25,7 +28,7 @@ letter-spacing:-0.1px;
     }
 `;
 
-const Hero = styled.div`
+export const Hero = styled.div`
 display: flex;
 flex-direction: column;
 justify-content: flex-end;
@@ -39,7 +42,7 @@ padding-right: 40px;
 padding-left: 40px;
 `;
 
-const Title = styled.h1 `
+export const Title = styled.h1 `
 font-size: 36px;
 font-weight:bold;
 letter-spacing:-0.4px;
@@ -48,7 +51,7 @@ letter-spacing:-0.4px;
     }
 `;
 
-const InputContainer = styled.div `
+export const InputContainer = styled.div `
 display: flex;
 flex-direction: column;
 background-color: white;
@@ -67,33 +70,41 @@ text-align: center;
 
 `;
 
-const Input = styled.input `
+export const Input = styled.input `
 margin-bottom:12px;
-border: 1px solid #24b8ca;
+border: 1px solid ${colors.primary};
 padding-top: 8px;
 `;
 
-const Select = styled.select `
+export const Select = styled.select `
 background-color: white;
 margin-bottom:12px;
 margin-right:12px;
-border: 1px solid #24b8ca;
+border: 1px solid ${colors.primary};
 padding-left: 15px;
 padding-top: 4px;
 padding-bottom: 4px;
 `;
 
-const MainContainer = styled.div`
+export const ReasonsContainer = styled.div`
+width: 100%;
+background: #B0E0E6;
+padding-bottom: 30px;
+`;
+
+export const MainContainer = styled.div`
 width: 100%;
 background: #B0E0E6;
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-
+@media (min-width: 500px) {
+   flex-direction: row;
+ }
 `;
 
-const MediumContainer = styled.div`
+export const MediumContainer = styled.div`
 background: #B0E0E6;
 display: flex;
 flex-direction: column;
@@ -101,13 +112,10 @@ align-items: center;
 justify-content: center;
 margin: 10px;
 width: 90%;
-@media (min-width: 500px) {
-    flex-direction: row;
-  }
 `;
 
-const SmallContainer = styled.div`
-width: 100%;
+export const SmallContainer = styled.div`
+width: 80%;
 background: #B0E0E6;
 display: flex;
 flex-direction: row;
@@ -115,42 +123,45 @@ align-items: center;
 justify-content: center;
 `;
 
-const ItemIcon = styled.div`
+export const ItemIcon = styled.div`
 background: #B0E0E6;
 width: 20%;
+@media (min-width: 500px) {
+   width: 15%;
+ }
 `;
 
-const ItemReason = styled.div`
+export const ItemReason = styled.div`
 background: #B0E0E6;
 width: 80%;
 text-align: center;
 padding: 10px;
 `;
 
-const ReasonTextRight= styled.p`
+export const ReasonTextRight= styled.p`
 letter-spacing: -0.1px;
 color: #031416;
 text-align: right;
 `;
 
-const ReasonTextRightBold = ReasonTextRight.extend`
+export const ReasonTextRightBold = ReasonTextRight.extend`
 font-weight: bold;
 margin-bottom: 4px;
 `;
 
-const ReasonTextLeft= styled.p`
+export const ReasonTextLeft= styled.p`
 font-family: 'Open Sans', sans-serif;
 letter-spacing: -0.1px;
 color: #031416;
 text-align: left;
 `;
 
-const ReasonTextLeftBold = ReasonTextLeft.extend`
+export const ReasonTextLeftBold = ReasonTextLeft.extend`
 font-weight: bold;
 margin-bottom: 4px;
 `;
 
-const Button = styled.button`
+export const Button = styled.button`
 background: #e81e7c;
 border: 2px solid #e81e7c;
 width: 128px;
@@ -159,36 +170,33 @@ text-weight: bold;
 color: #fff;
 margin-left: auto;
 margin-right: auto;
-margin-bottom: 30px;
 cursor: pointer;
+display: block;
+@media (min-width: 500px) {
+   font-size: 16px;
+ }
 `;
 
-const HomeFooter = styled.div`
+export const HomeFooter = styled.div`
 background: #031416;
 width: 100%;
 height: 92px;
-text-weight: 600;
-letter-spacing: -0.1px;
-color: #fff;
-text-align: center;
-line-height: 92px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 `;
 
-export {MainContainer};
-export {MediumContainer};
-export {SmallContainer};
-export {ItemIcon};
-export {ItemReason};
-export {Button};
-export {ReasonTextRight};
-export {ReasonTextLeft};
-export {ReasonTextRightBold};
-export {ReasonTextLeftBold};
-export {HomeFooter};
-export {Hero};
-export {Header};
-export {Title};
-export {MenuItem};
-export {Input};
-export {InputContainer};
-export {Select};
+export const HomeFooterItem1 = styled.div`
+text-weight: 600;
+font-size: 12px;
+letter-spacing: -0.1px;
+color: #fff;
+`;
+
+export const HomeFooterItem2 = styled.div`
+text-weight: 600;
+font-size: 10px;
+letter-spacing: -0.1px;
+color: #fff;
+`;
