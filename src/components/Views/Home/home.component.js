@@ -21,93 +21,93 @@ export default class Home extends React.Component {
 	render(){
 		return(
 
-<div className= 'hero'>
-  <Header>
-    <img src={logo} alt="logo" height="50vh"/>
-    <nav>
-      <ul className='no-decoration'>
-        <MenuItem>
-          <a href="/html/" className= 'hero'>Entrar</a>
-        </MenuItem>
-      </ul>
-    </nav>
-  </Header>
-  <div className= "fullscreen">
-  <Hero>
-    <Title>Seniors</Title>
-    <p>Welcome to the first application that cares about what you care. Find the best caregivers for your elderlies.</p>
-  </Hero>
-  <InputContainer>
-    <Input />
-    <Input />
-    <Button>Buscar</Button>
-  </InputContainer>
+			<div className= 'hero'>
+				<Header>
+					<img src={logo} alt="logo" height="50vh"/>
+					<nav>
+						<ul className='no-decoration'>
+							<MenuItem>
+								<a href="/html/" className= 'hero'>Entrar</a>
+							</MenuItem>
+						</ul>
+					</nav>
+				</Header>
+				<div className= "fullscreen">
+					<Hero>
+						<Title>Seniors</Title>
+						<p>Welcome to the first application that cares about what you care. Find the best caregivers for your elderlies.</p>
+					</Hero>
+					<InputContainer>
+						<Input />
+						<Input />
+						<Button>Buscar</Button>
+					</InputContainer>
 
-</div>
-			<div>
-				<MainContainer>
-					<MediumContainer>
-						<SmallContainer>
-							<ItemIcon>
-								<img src={IconA} />
-							</ItemIcon>
-							<ItemReason>
-								<ReasonTextLeftBold>
+				</div>
+				<div>
+					<MainContainer>
+						<MediumContainer>
+							<SmallContainer>
+								<ItemIcon>
+									<img src={IconA} />
+								</ItemIcon>
+								<ItemReason>
+									<ReasonTextLeftBold>
 								Lorem ipsum
-								</ReasonTextLeftBold>
-								<ReasonTextLeft>
+									</ReasonTextLeftBold>
+									<ReasonTextLeft>
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit
-								</ReasonTextLeft>
-							</ItemReason>
-						</SmallContainer>
-						<SmallContainer>
-							<ItemReason>
-								<ReasonTextRightBold>
+									</ReasonTextLeft>
+								</ItemReason>
+							</SmallContainer>
+							<SmallContainer>
+								<ItemReason>
+									<ReasonTextRightBold>
 								Lorem ipsum
-								</ReasonTextRightBold>
-								<ReasonTextRight>
+									</ReasonTextRightBold>
+									<ReasonTextRight>
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit
-								</ReasonTextRight>
-							</ItemReason>
-							<ItemIcon>
-								<img src={IconB} />
-							</ItemIcon>
-						</SmallContainer>
-					</MediumContainer>
-					<MediumContainer>
-						<SmallContainer>
-							<ItemIcon>
-								<img src={IconC} />
-							</ItemIcon>
-							<ItemReason>
-								<ReasonTextLeftBold>
+									</ReasonTextRight>
+								</ItemReason>
+								<ItemIcon>
+									<img src={IconB} />
+								</ItemIcon>
+							</SmallContainer>
+						</MediumContainer>
+						<MediumContainer>
+							<SmallContainer>
+								<ItemIcon>
+									<img src={IconC} />
+								</ItemIcon>
+								<ItemReason>
+									<ReasonTextLeftBold>
 								Lorem ipsum
-								</ReasonTextLeftBold>
-								<ReasonTextLeft>
+									</ReasonTextLeftBold>
+									<ReasonTextLeft>
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit
-								</ReasonTextLeft>
-							</ItemReason>
-						</SmallContainer>
-						<SmallContainer>
-							<ItemReason>
-								<ReasonTextRightBold>
+									</ReasonTextLeft>
+								</ItemReason>
+							</SmallContainer>
+							<SmallContainer>
+								<ItemReason>
+									<ReasonTextRightBold>
 								Lorem ipsum
-								</ReasonTextRightBold>
-								<ReasonTextRight>
+									</ReasonTextRightBold>
+									<ReasonTextRight>
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit
-								</ReasonTextRight>
-							</ItemReason>
-							<ItemIcon>
-								<img src={IconD} />
-							</ItemIcon>
-						</SmallContainer>
-					</MediumContainer>
-					<Button>Más</Button>
-				</MainContainer>
-				<HomeFooter>
+									</ReasonTextRight>
+								</ItemReason>
+								<ItemIcon>
+									<img src={IconD} />
+								</ItemIcon>
+							</SmallContainer>
+						</MediumContainer>
+						<Button>Más</Button>
+					</MainContainer>
+					<HomeFooter>
 				Senior &copy; 2018 Politica de cookies
-				</HomeFooter>
-			</div>
+					</HomeFooter>
+				</div>
 
 			</div>
 
