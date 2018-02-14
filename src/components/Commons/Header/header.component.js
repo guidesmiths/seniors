@@ -21,7 +21,7 @@ font-size:12px;
 letter-spacing:-0.1px;
 @media (min-width: 768px) {
   font-size: 16px;
-    }
+}
 `;
 
 export default class Header extends React.Component {

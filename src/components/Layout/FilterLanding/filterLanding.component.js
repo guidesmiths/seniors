@@ -57,6 +57,10 @@ margin-left: auto;
 margin-right: auto;
 cursor: pointer;
 display: block;
+&:hover {
+		 color: #e81e7c;
+		 background: #fff;
+	 }
 @media (min-width: 768px) {
    font-size: 16px;
    margin:0;
