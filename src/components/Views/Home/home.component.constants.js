@@ -55,13 +55,17 @@ export const InputContainer = styled.div `
 display: flex;
 flex-direction: column;
 background-color: white;
-padding: 36px 64px 0;
+padding: 36px 64px;
 text-align: center;
-@media (min-width: 500px) {
-    z-index: 10;
+transition: width 1s, box-shadow 1s;
+@media (min-width: 768px) {
+    justify-content:center;
+    position:absolute;
+    left: 0;
+    right: 0;
     width:80vw;
     flex-direction: row;
-    padding: 46px 52px 0;
+    padding: 46px 52px 40px;
     margin-left: auto;
     margin-right:auto;
     margin-top:-60px;
@@ -72,6 +76,7 @@ text-align: center;
 
 export const Input = styled.input `
 margin-bottom:12px;
+margin-right:12px;
 border: 1px solid ${colors.primary};
 padding-top: 8px;
 `;
@@ -171,7 +176,7 @@ margin-left: auto;
 margin-right: auto;
 cursor: pointer;
 display: block;
-@media (min-width: 500px) {
+@media (min-width: 768px) {
    font-size: 16px;
    margin:0;
  }
