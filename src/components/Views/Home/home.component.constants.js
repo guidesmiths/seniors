@@ -23,7 +23,7 @@ color: white;
 font-weight:bold;
 font-size:12px;
 letter-spacing:-0.1px;
-@media (min-width: 500px) {
+@media (min-width: 768px) {
   font-size: 16px;
     }
 `;
@@ -104,25 +104,23 @@ padding-bottom: 4px;
 `;
 
 export const ReasonsContainer = styled.div`
+padding-top: 100px;
 width: 100%;
-background: #B0E0E6;
 padding-bottom: 30px;
 `;
 
 export const MainContainer = styled.div`
 width: 100%;
-background: #B0E0E6;
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-@media (min-width: 500px) {
+@media (min-width: 768px) {
    flex-direction: row;
  }
 `;
 
 export const MediumContainer = styled.div`
-background: #B0E0E6;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -133,7 +131,6 @@ width: 90%;
 
 export const SmallContainer = styled.div`
 width: 80%;
-background: #B0E0E6;
 display: flex;
 flex-direction: row;
 align-items: center;
@@ -141,15 +138,13 @@ justify-content: center;
 `;
 
 export const ItemIcon = styled.div`
-background: #B0E0E6;
 width: 20%;
-@media (min-width: 500px) {
+@media (min-width: 768px) {
    width: 15%;
  }
 `;
 
 export const ItemReason = styled.div`
-background: #B0E0E6;
 width: 80%;
 text-align: center;
 padding: 10px;
@@ -159,11 +154,19 @@ export const ReasonTextRight= styled.p`
 letter-spacing: -0.1px;
 color: #031416;
 text-align: right;
+font-size: 12px;
+@media (min-width: 1000px) {
+   font-size: 16px;
+ }
 `;
 
 export const ReasonTextRightBold = ReasonTextRight.extend`
 font-weight: bold;
 margin-bottom: 4px;
+font-size: 12px;
+@media (min-width: 1000px) {
+   font-size: 16px;
+ }
 `;
 
 export const ReasonTextLeft= styled.p`
@@ -171,11 +174,19 @@ font-family: 'Open Sans', sans-serif;
 letter-spacing: -0.1px;
 color: #031416;
 text-align: left;
+font-size: 12px;
+@media (min-width: 1000px) {
+   font-size: 16px;
+ }
 `;
 
 export const ReasonTextLeftBold = ReasonTextLeft.extend`
 font-weight: bold;
 margin-bottom: 4px;
+font-size: 12px;
+@media (min-width: 1000px) {
+   font-size: 16px;
+ }
 `;
 export const Button1 = styled.button`
 background: #e81e7c;
@@ -195,7 +206,7 @@ display: block;
 `;
 
 export const Button2 = Button1.extend`
-@media (min-width: 500px) {
+@media (min-width: 768px) {
   margin-left: auto;
   margin-right: auto;
  }
