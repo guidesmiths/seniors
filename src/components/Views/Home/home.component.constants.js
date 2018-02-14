@@ -29,6 +29,7 @@ letter-spacing:-0.1px;
 `;
 
 export const Hero = styled.div`
+font-size:12px;
 display: flex;
 flex-direction: column;
 justify-content: flex-end;
@@ -37,17 +38,28 @@ background-image: url(${hero});
 background-size: cover;
 background-position: center;
 height: 80vh;
-padding-bottom: 10%;
+padding-bottom: 48px;
 padding-right: 40px;
 padding-left: 40px;
+@media (min-width: 768px) {
+  font-size: 16px;
+  padding-bottom: 108px;
+    }
+@media (min-width: 1280px) {
+  font-size: 24px;
+  padding-bottom: 90px;
+    }
 `;
 
 export const Title = styled.h1 `
 font-size: 36px;
 font-weight:bold;
 letter-spacing:-0.4px;
-@media (min-width: 500px) {
+@media (min-width: 768px) {
   font-size: 72px;
+    }
+@media (min-width: 1280px) {
+  font-size: 96px;
     }
 `;
 
@@ -170,7 +182,7 @@ background: #e81e7c;
 border: 2px solid #e81e7c;
 width: 128px;
 height: 32px;
-text-weight: bold;
+font-weight: bold;
 color: #fff;
 margin-left: auto;
 margin-right: auto;

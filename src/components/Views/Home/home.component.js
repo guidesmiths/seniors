@@ -42,7 +42,7 @@ export default class Home extends React.Component {
 						<option value="Price">Filtrar por precio</option>
 						<option value="Score">Filtrar por valoración</option>
 					</Select>
-					<Input />
+					<Input placeholder="C/ La priruleta 9, Madrid" />  
 					<Button1>Buscar</Button1>
 				</InputContainer>
 				<div>
