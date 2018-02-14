@@ -2,126 +2,24 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./home.css";
 import styled from 'styled-components';
-import IconA from '../../../img/icon-a.svg';
-import IconB from '../../../img/icon-b.svg';
-import IconC from '../../../img/icon-c.svg';
-import IconD from '../../../img/icon-d.svg';
-import {Header, Hero, Title, Text, MenuItem, Input,Select, InputContainer, ReasonsContainer, MainContainer, MediumContainer, SmallContainer, ItemIcon, ItemReason, Button1, Button2, ReasonTextRight, ReasonTextLeft, ReasonTextLeftBold, ReasonTextRightBold, HomeFooter, HomeFooterItem1, HomeFooterItem2} from './home.component.constants';
-import logo from '../../../img/logo.svg';
-
+import Header from '../../Commons/Header/header.component';
+import Footer from '../../Commons/Footer/footer.component';
+import Hero from '../../Layout/Hero/hero.component';
+import FilterLanding from '../../Layout/FilterLanding/filterLanding.component';
+import Reasons from '../../Layout/Reasons/reasons.component';
 
 export default class Home extends React.Component {
-
-	constructor(props){
-		super(props);
-		this.state = {};
-	}
-
 	render(){
 		return(
 
-			<div className= 'hero'>
-				<Header>
-					<img src={logo} alt="logo" height="50vh"/>
-					<nav>
-						<ul className='no-decoration'>
-							<MenuItem>
-								<a href="/html/" className= 'hero'>Entrar</a>
-							</MenuItem>
-						</ul>
-					</nav>
-				</Header>
-
-				<Hero>
-					<Title>Seniors</Title>
-					<p>Welcome to the first application that cares about what you care. Find the best caregivers for your elderlies.</p>
-				</Hero>
-				<InputContainer>
-					<Select>
-						<option value="Direction">Filtrar por dirección</option>
-						<option value="Price">Filtrar por precio</option>
-						<option value="Score">Filtrar por valoración</option>
-					</Select>
-					<Input placeholder="C/ La priruleta 9, Madrid" />  
-					<Button1>Buscar</Button1>
-				</InputContainer>
-				<div>
-					<ReasonsContainer>
-						<MainContainer>
-							<MediumContainer>
-								<SmallContainer>
-									<ItemIcon>
-										<img src={IconA} />
-									</ItemIcon>
-									<ItemReason>
-										<ReasonTextLeftBold>
-                               Lorem ipsum
-										</ReasonTextLeftBold>
-										<ReasonTextLeft>
-                               Lorem ipsum dolor sit amet, consectetur adipisicing elit
-										</ReasonTextLeft>
-									</ItemReason>
-								</SmallContainer>
-								<SmallContainer>
-									<ItemReason>
-										<ReasonTextRightBold>
-                               Lorem ipsum
-										</ReasonTextRightBold>
-										<ReasonTextRight>
-                               Lorem ipsum dolor sit amet, consectetur adipisicing elit
-										</ReasonTextRight>
-									</ItemReason>
-									<ItemIcon>
-										<img src={IconB} />
-									</ItemIcon>
-								</SmallContainer>
-							</MediumContainer>
-							<MediumContainer>
-								<SmallContainer>
-									<ItemIcon>
-										<img src={IconC} />
-									</ItemIcon>
-									<ItemReason>
-										<ReasonTextLeftBold>
-                               Lorem ipsum
-										</ReasonTextLeftBold>
-										<ReasonTextLeft>
-                               Lorem ipsum dolor sit amet, consectetur adipisicing elit
-										</ReasonTextLeft>
-									</ItemReason>
-								</SmallContainer>
-								<SmallContainer>
-									<ItemReason>
-										<ReasonTextRightBold>
-                               Lorem ipsum
-										</ReasonTextRightBold>
-										<ReasonTextRight>
-                               Lorem ipsum dolor sit amet, consectetur adipisicing elit
-										</ReasonTextRight>
-									</ItemReason>
-									<ItemIcon>
-										<img src={IconD} />
-									</ItemIcon>
-								</SmallContainer>
-							</MediumContainer>
-						</MainContainer>
-						<Button2>Más</Button2>
-					</ReasonsContainer>
-					<HomeFooter>
-						<HomeFooterItem1>
-                   Política de cookies
-						</HomeFooterItem1>
-						<HomeFooterItem2>
-                   Seniors &copy; 2018
-						</HomeFooterItem2>
-					</HomeFooter>
-				</div>
-
+			<div>
+				<Header/>
+				<Hero/>
+				<FilterLanding/>
+				<Reasons/>
+				<Footer/>
 			</div>
 
 		);
 	}
 }
-
-Home.propTypes = {
-};
