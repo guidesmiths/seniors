@@ -109,6 +109,10 @@ margin-left: auto;
 margin-right: auto;
 cursor: pointer;
 display: block;
+&:hover {
+		 color: #e81e7c;
+		 background: #fff;
+	 }
 @media (min-width: 768px) {
    font-size: 16px;
    margin:0;
@@ -116,6 +120,7 @@ display: block;
 `;
 
 const Button2 = Button1.extend`
+border: 2px solid #e81e7c;
 @media (min-width: 768px) {
   margin-left: auto;
   margin-right: auto;
