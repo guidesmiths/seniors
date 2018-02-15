@@ -3,20 +3,22 @@ import { storiesOf } from '@storybook/react';
 import StoryRouter from 'storybook-router';
 import { Provider } from 'react-redux';
 
-import Hero from './hero.component.js';
+import FilterLanding from './filterLanding.component.js';
 
 
 import configureStore from '../../../configureStore';
 
 const store = configureStore();
 
-storiesOf('Hero', module)
+storiesOf('Filter Landing', module)
 	.addDecorator(StoryRouter())
 	.addDecorator((render) => (
 		<Provider store={store}>
 			{render()}
 		</Provider>
 	))
-	.add('Hero', () => (
-		<Hero />
+	.add('FilterLanding', () => (
+		<div style={{ padding: '150px'}}>
+			<FilterLanding />
+		</div>
 	));
