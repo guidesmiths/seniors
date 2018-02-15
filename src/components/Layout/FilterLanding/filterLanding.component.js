@@ -2,13 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from 'styled-components';
 import  {Flex} from '../../Styles/Flex';
-
-
-const colors = {
-	primary: '#24b8ca',
-	secondary: '#e81e7c',
-	light: 'white'
-};
+import  {colors} from '../../Styles/Variables';
 
 const InputContainer = Flex.extend`
 z-index: 1;
