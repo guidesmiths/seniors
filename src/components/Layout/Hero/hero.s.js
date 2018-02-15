@@ -18,5 +18,7 @@ storiesOf('Hero', module)
 		</Provider>
 	))
 	.add('Hero', () => (
-		<Hero />
+
+		<Hero/>
+
 	));
