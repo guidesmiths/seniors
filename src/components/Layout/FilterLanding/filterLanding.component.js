@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from 'styled-components';
+import  {Flex} from '../../Styles/Flex';
+
 
 const colors = {
 	primary: '#24b8ca',
@@ -8,20 +10,16 @@ const colors = {
 	light: 'white'
 };
 
-const InputContainer = styled.div `
-display: flex;
-flex-direction: column;
+const InputContainer = Flex.extend`
+z-index: 1;
 background-color: ${colors.light};
 padding: 36px 64px;
-align-items: center;
 transition: width 1s;
 @media (min-width: 768px) {
-    justify-content:center;
     position:absolute;
     left: 0;
     right: 0;
     width:80vw;
-    flex-direction: row;
     padding: 46px 52px 40px;
     margin-left: auto;
     margin-right:auto;
@@ -78,7 +76,7 @@ display: block;
 export default class FilterLanding extends React.Component {
 	render(){
 		return(
-			<InputContainer>
+			<InputContainer >
 				<Select>
 					<option value="Direction">Filtrar por dirección</option>
 					<option value="Price">Filtrar por precio</option>
