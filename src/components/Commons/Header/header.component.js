@@ -18,7 +18,7 @@ const HeaderStyle = styled.div `
 	text-decoration: none;
 	width: 100%;
 	z-index: 1;
-	nav{
+	nav {
 		align-items: center;
 		display: flex;
 		ul {
