@@ -17,11 +17,12 @@ color: white;
 padding: 48px 40px;
 @media (min-width: 768px) {
   font-size: 16px;
-  padding-bottom: 108px;
+  padding: 48px 200px 100px;
+
     }
 @media (min-width: 1280px) {
   font-size: 24px;
-  padding-bottom: 90px;
+  padding: 48px 400px 90px;
     }
 `;
 
