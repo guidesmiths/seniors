@@ -13,7 +13,6 @@ display: flex;
 flex-direction: row;
 align-items: center;
 justify-content: center;
-border: 1px solid green;
 `;
 
 const ItemIcon = styled.div`

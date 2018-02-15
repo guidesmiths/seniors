@@ -14,9 +14,11 @@ const colors = {
 };
 
 const ReasonsContainer = styled.div`
-padding-top: 100px;
 width: 100%;
 padding-bottom: 30px;
+@media (min-width: 768px) {
+   padding-top: 100px;
+ }
 `;
 
 const MainReasonsContainer = styled.div`
@@ -25,7 +27,6 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-border: 1px solid red;
 @media (min-width: 768px) {
    flex-direction: row;
  }
@@ -38,7 +39,6 @@ align-items: center;
 justify-content: center;
 margin: 10px;
 width: 90%;
-border: 1px solid blue;
 `;
 
 const Button1 = styled.button`
@@ -80,7 +80,6 @@ export default class Reasons extends React.Component {
 						<RightReason iconImage={IconB} rightReasonTitle='Lorem ipsum' rightReasonText='Lorem ipsum' />
 					</PairReasonsContainer>
 					<PairReasonsContainer>
-
 						<LeftReason iconImage={IconC} leftReasonTitle='Lorem ipsum' leftReasonText='Lorem ipsum' />
 						<RightReason iconImage={IconD} rightReasonTitle='Lorem ipsum' rightReasonText='Lorem ipsum' />
 					</PairReasonsContainer>
