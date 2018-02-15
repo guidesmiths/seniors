@@ -4,16 +4,17 @@ import styled from 'styled-components';
 
 const colors = {
 	primary: '#24b8ca',
-	secondary: '#B0E0E6'
+	secondary: '#e81e7c',
+	light: 'white'
 };
 
 const InputContainer = styled.div `
 display: flex;
 flex-direction: column;
-background-color: white;
+background-color: ${colors.light};
 padding: 36px 64px;
-text-align: center;
-transition: width 1s, box-shadow 1s;
+align-items: center;
+transition: width 1s;
 @media (min-width: 768px) {
     justify-content:center;
     position:absolute;
@@ -33,33 +34,40 @@ const Input = styled.input `
 margin-bottom:12px;
 margin-right:12px;
 border: 1px solid ${colors.primary};
-padding-top: 8px;
+height:36px;
+width:192px;
+@media (min-width: 768px) {
+  width:256px;
+  margin-bottom: 0;
+ }
 `;
 
 const Select = styled.select `
-background-color: white;
+background-color: ${colors.light};
 margin-bottom:12px;
 margin-right:12px;
 border: 1px solid ${colors.primary};
-padding-left: 15px;
-padding-top: 4px;
-padding-bottom: 4px;
+height:36px;;
+width:192px;
+@media (min-width: 768px) {
+  margin-bottom: 0;
+ }
 `;
 
 const Button1 = styled.button`
-background: #e81e7c;
-border: 2px solid #e81e7c;
+background: ${colors.secondary};
+border: 2px solid ${colors.secondary};
 width: 128px;
 height: 32px;
 font-weight: bold;
-color: #fff;
+color: ${colors.light};
 margin-left: auto;
 margin-right: auto;
 cursor: pointer;
 display: block;
 &:hover {
-		 color: #e81e7c;
-		 background: #fff;
+		 color: ${colors.secondary};
+		 background: ${colors.light};
 	 }
 @media (min-width: 768px) {
    font-size: 16px;
