@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import hero from '../../../img/hero.jpg';
 
 const HeroStyle = styled.div`
-font-size:12px;
 display: flex;
 flex-direction: column;
 justify-content: flex-end;
@@ -13,9 +12,9 @@ background-image: url(${hero});
 background-size: cover;
 background-position: center;
 height: 80vh;
-padding-bottom: 48px;
-padding-right: 40px;
-padding-left: 40px;
+font-size:12px;
+color: white;
+padding: 48px 40px;
 @media (min-width: 768px) {
   font-size: 16px;
   padding-bottom: 108px;
