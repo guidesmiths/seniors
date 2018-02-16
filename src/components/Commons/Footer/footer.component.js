@@ -1,19 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from 'styled-components';
+import {colors} from '../../Styles/Variables';
+import {Flex} from '../../Styles/Flex';
 
-export const FooterStyle = styled.div`
-background: #031416;
-width: 100%;
+export const FooterStyle = Flex.extend`
+background: ${colors.dark};
 height: 92px;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
 text-weight: 600;
-font-size: 12px;
 letter-spacing: -0.1px;
-color: #fff;
 `;
 
 export default class Footer extends React.Component {
