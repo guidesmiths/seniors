@@ -1,36 +1,32 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./home.css";
-import logo from '../../../logo.svg';
+import styled from 'styled-components';
+import Header from '../../Layout/Header/header.component';
+import Footer from '../../Commons/Footer/footer.component';
+import Hero from '../../Layout/Hero/hero.component';
+import FilterLanding from '../../Layout/FilterLanding/filterLanding.component';
+import Reasons from '../../Layout/Reasons/reasons.component';
+import  {colors} from '../../Styles/Variables';
 
-import { Button } from 'reactstrap';
 
-import Filter from '../../Commons/Filter/filter.container';
-import CardList from '../../Commons/CardList/cardList.container';
+const HomeContainer = styled.div `
+font-size:12px;
+color: ${colors.light};
+font-family: 'Open Sans', sans-serif;
+`;
 
 export default class Home extends React.Component {
-	constructor(props){
-		super(props);
-		this.state = {};
-	}
-
-	changeNumber = (value) => {
-		this.props.setValue(value);
-	}
-
 	render(){
-		const { value } = this.props;
 		return(
-			<div className="App">
-				<Filter />
-				<CardList />
-			</div>
+
+			<HomeContainer>
+				<Header/>
+				<Hero/>
+				<FilterLanding/>
+				<Reasons/>
+				<Footer/>
+			</HomeContainer>
+
 		);
 	}
-
 }
-
-Home.propTypes = {
-	value: PropTypes.number,
-	setValue: PropTypes.func
-};

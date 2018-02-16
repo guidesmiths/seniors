@@ -1,12 +1,12 @@
 import { combineReducers } from "redux";
 
-import home from './Home/reducer';
+import search from './Search/reducer';
 import login from './Login/reducer';
 import filter from './Filter/reducer';
 import assistants from './Assistants/reducer';
 
 const appReducer = combineReducers({
-	home,
+	search,
 	login,
 	filter,
 	assistants

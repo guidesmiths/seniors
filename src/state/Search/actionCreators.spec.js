@@ -1,7 +1,7 @@
 import * as actionTypes from "./actionTypes";
 import * as actions from "./actionCreators";
 
-describe("actions Home", () => {
+describe("actions Search", () => {
 
 	test(`${actionTypes.SET_VALUE} with payload`, () => {
 		expect(actions.setValue(5)).toEqual({

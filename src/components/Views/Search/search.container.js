@@ -9,20 +9,15 @@ import {
 	setValue
 } from "../../../state/Search/actionCreators";
 
-import {
-	logoutSubmit
-} from "../../../state/Login/actionCreators";
-
-import MyNavBar from './navBar.component';
+import Search from './search.component';
 
 const mapStateToProps = (state, ownProps) => ({
 	location: ownProps.location,
 	value: getValue(state)
 });
 
-const mapDispatchToProps = (dispatch) => ({
-	setValue,
-	logout: (onSuccess) => { dispatch(logoutSubmit(onSuccess)); }
-});
+const mapDispatchToProps = {
+	setValue
+};
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(MyNavBar));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Search));
