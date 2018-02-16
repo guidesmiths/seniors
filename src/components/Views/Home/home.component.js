@@ -7,6 +7,7 @@ import Footer from '../../Commons/Footer/footer.component';
 import Hero from '../../Layout/Hero/hero.component';
 import FilterLanding from '../../Layout/FilterLanding/filterLanding.component';
 import Reasons from '../../Layout/Reasons/reasons.component';
+import Video from '../../Layout/Video/video.component';
 
 export default class Home extends React.Component {
 	render(){
@@ -17,6 +18,7 @@ export default class Home extends React.Component {
 				<Hero/>
 				<FilterLanding/>
 				<Reasons/>
+				<Video/>
 				<Footer/>
 			</div>
 
