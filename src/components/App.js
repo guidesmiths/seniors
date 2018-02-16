@@ -15,22 +15,21 @@ import './App.css';
 const App = () => (
 	<Router>
 		<Switch>
-			<Route
+			<Route 
 				exact
 				path="/login"
 				component={props =>( isAuthenticated() ? <Redirect to={{ pathname: '/' }}/> : <Login {...props}/>  )}
 			/>
-			<Route
-				path='/register'
+			<Route path='/register'
 				component={props =>( isAuthenticated() ? <Redirect to={{ pathname: '/' }}/> : <Register {...props}/>  )}
 			/>
-			<Route
+			<Route 
 				path="/"
-				component={MainLayoutRouter}
+				component={props =>( isAuthenticated() ? <MainLayoutRouter /> : <Login {...props}/> )}
 			/>
 			<Route component={NoMatch}/>
 		</Switch>
-	</Router>
+	</Router> 
 );
 
 const NoMatch = () => ( <div>404</div>);

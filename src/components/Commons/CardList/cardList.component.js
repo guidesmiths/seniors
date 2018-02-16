@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./cardList.css";
 import Card from "../Card/card.container";
-import data from './mock-data.json';
 
 export default class CardList extends React.Component {
 
@@ -14,8 +13,8 @@ export default class CardList extends React.Component {
 	render(){
 		console.log(this.props);
 		return(
-			<div>
-				{data.map((as, i)=><Card key={as.id} assistant={as} />)}
+			<div>	
+				{this.props.assistants.map((as, i)=><Card key={as.id} assistant={as} />)}
 			</div>
 		);
 	}

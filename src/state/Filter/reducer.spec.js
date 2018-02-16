@@ -2,7 +2,7 @@ import reducer from './reducer';
 import * as actionTypes from "./actionTypes";
 import initialState from "./initial.state";
 
-describe('search reducer', () => {
+describe('home reducer', () => {
 
 	let state;
 
