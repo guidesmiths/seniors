@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import styled from 'styled-components';
 import  {Flex} from '../../Styles/Flex';
 import  {colors} from '../../Styles/Variables';
+import { BrowserRouter as Router, Switch, Route, Redirect, Link } from 'react-router-dom';
 
 const InputContainer = Flex.extend`
 z-index: 1;
@@ -78,8 +79,8 @@ export default class FilterLanding extends React.Component {
 					<option value="Price">Filtrar por precio</option>
 					<option value="Score">Filtrar por valoración</option>
 				</Select>
-				<Input placeholder="C/ La piruleta 9, Madrid" />
-				<Button1>Buscar</Button1>
+				<Input placeholder="C/ La piruleta 9, Madrid" /><Link to="/search">
+					<Button1>Buscar</Button1></Link>
 			</InputContainer>
 		);
 	}
