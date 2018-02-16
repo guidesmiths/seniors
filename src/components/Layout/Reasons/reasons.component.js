@@ -5,31 +5,19 @@ import IconA from '../../../img/icon-a.svg';
 import IconB from '../../../img/icon-b.svg';
 import IconC from '../../../img/icon-c.svg';
 import IconD from '../../../img/icon-d.svg';
-import {Button2} from '../../Commons/Button/button.component';
-
+import {Button} from '../../Styles/Buttons';
+import {colors} from '../../Styles/Variables';
 import {Paragraph} from '../../Styles/Paragraph';
 import {Flex} from '../../Styles/Flex';
 
-const colors = {
-	primary: '#24b8ca',
-	secondary: '#B0E0E6'
-};
 
-const ReasonsContainer = styled.div`
+const MainContainer = styled.div`
+background-color: ${colors.primary};
 width: 100%;
 padding-bottom: 30px;
 @media (min-width: 768px) {
    padding-top: 100px;
  }
-`;
-
-const PairReasonsContainer = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-margin: 10px;
-width: 90%;
 `;
 
 const ItemIcon = styled.div`
@@ -49,7 +37,7 @@ padding: 10px;
 export default class Reasons extends React.Component {
 	render(){
 		return(
-			<ReasonsContainer>
+			<MainContainer>
 				<Flex>
 					<Flex marginBox={'10px'} boxWidth={'90%'} directionLg={'column'} >
 						<Flex boxWidth={'80%'} direction={'row'}>
@@ -108,8 +96,8 @@ export default class Reasons extends React.Component {
 						</Flex>
 					</Flex>
 				</Flex>
-				<Button2>Más</Button2>
-			</ReasonsContainer>
+				<Button>Más</Button>
+			</MainContainer>
 		);
 	}
 }

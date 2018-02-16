@@ -8,19 +8,27 @@ import Hero from '../../Layout/Hero/hero.component';
 import FilterLanding from '../../Layout/FilterLanding/filterLanding.component';
 import Reasons from '../../Layout/Reasons/reasons.component';
 import Video from '../../Layout/Video/video.component';
+import {colors} from '../../Styles/Variables';
+
+
+const HomeContainer = styled.div `
+font-family: 'Open Sans', sans-serif;
+color: ${colors.light};
+font-size: 12px;
+`;
 
 export default class Home extends React.Component {
 	render(){
 		return(
 
-			<div>
+			<HomeContainer>
 				<Header/>
 				<Hero/>
 				<FilterLanding/>
 				<Reasons/>
 				<Video/>
 				<Footer/>
-			</div>
+			</HomeContainer>
 
 		);
 	}
