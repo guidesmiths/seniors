@@ -53,7 +53,7 @@ background: ${colors.secondary};
 border: 2px solid ${colors.secondary};
 width: 128px;
 height: 32px;
-font-weight: bold;
+font-weight: 700;
 color: ${colors.light};
 margin-left: auto;
 margin-right: auto;

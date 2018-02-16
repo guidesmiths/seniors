@@ -28,7 +28,7 @@ padding: 48px 40px;
 
 const Title = styled.h1 `
 font-size: 36px;
-font-weight:bold;
+font-weight: 700;
 letter-spacing:-0.4px;
 @media (min-width: 768px) {
   font-size: 72px;
