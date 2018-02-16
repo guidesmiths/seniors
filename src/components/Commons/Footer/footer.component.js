@@ -14,7 +14,7 @@ letter-spacing: -0.1px;
 export default class Footer extends React.Component {
 	render(){
 		return(
-			<FooterStyle>
+			<FooterStyle directionLg={'column'}>
 				<p>
           Política de cookies
 				</p>

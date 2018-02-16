@@ -3,20 +3,18 @@ import { storiesOf } from '@storybook/react';
 import StoryRouter from 'storybook-router';
 import { Provider } from 'react-redux';
 
-import Reason from './reasons.component.js';
+import Footer from './footer.component.js';
 import configureStore from '../../../configureStore';
 
 const store = configureStore();
 
-storiesOf('ReasonsList', module)
+storiesOf('Footer', module)
 	.addDecorator(StoryRouter())
 	.addDecorator((render) => (
 		<Provider store={store}>
 			{render()}
 		</Provider>
 	))
-	.add('Reason', () => (
-		<div>
-			<Reason />
-		</div>
+	.add('Footer', () => (
+		<Footer />
 	));
