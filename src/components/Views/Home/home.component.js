@@ -12,9 +12,9 @@ import {colors} from '../../Styles/Variables';
 
 
 const HomeContainer = styled.div `
-font-family: 'Open Sans', sans-serif;
-color: ${colors.light};
-font-size: 12px;
+	font-family: 'Open Sans', sans-serif;
+	color: ${colors.light};
+	font-size: 12px;
 `;
 
 export default class Home extends React.Component {
