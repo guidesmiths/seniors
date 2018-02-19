@@ -7,8 +7,12 @@ display: flex;
 flex-direction: ${props => props.direction || 'column'};
 align-items: ${props => props.align || 'center'};
 justify-content: ${props => props.justify || 'center'};
+width: ${props => props.boxWidth || '100%'};
+padding-bottom: ${props => props.paddingBottom || '0px'};
+margin: ${props => props.marginBox || '0px'};
 
 @media (min-width: 768px) {
   flex-direction: ${props => props.directionLg || 'row'};
+  padding-top: ${props => props.paddingTopLg || '0px'};
 }
 `;
