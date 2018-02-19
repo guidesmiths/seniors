@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./search.css";
 import logo from '../../../logo.svg';
+import Header from '../../Layout/Header/header.component';
 
 import { Button } from 'reactstrap';
 
@@ -22,6 +23,7 @@ export default class Search extends React.Component {
 		const { value } = this.props;
 		return(
 			<div className="App">
+				<Header />
 				<Filter />
 				<CardList />
 			</div>
