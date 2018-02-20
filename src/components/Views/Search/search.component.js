@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import "./search.css";
 import logo from '../../../logo.svg';
 import Header from '../../Layout/Header/header.component';
+import CardContainer1 from '../../Commons/WholeCardContainer/wholeCardContainer.component';
 
 import { Button } from 'reactstrap';
 
@@ -22,10 +23,12 @@ export default class Search extends React.Component {
 	render(){
 		const { value } = this.props;
 		return(
-			<div className="App">
+			<div>
 				<Header />
-				<Filter />
-				<CardList />
+				<div className="App">
+					<Filter />
+					<CardContainer1 />
+				</div>
 			</div>
 		);
 	}
@@ -36,3 +39,5 @@ Search.propTypes = {
 	value: PropTypes.number,
 	setValue: PropTypes.func
 };
+
+//<CardList />
