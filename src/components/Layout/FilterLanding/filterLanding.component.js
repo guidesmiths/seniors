@@ -28,23 +28,30 @@ const Input = styled.input `
 margin-bottom:12px;
 margin-right:12px;
 border: 1px solid ${colors.primary};
+color: ${colors.primary};
 padding-left:14px;
 height:36px;
 width:192px;
+&::placeholder{
+  color: ${colors.primary};
+}
 @media (min-width: 768px) {
-  width:256px;
+  width: 45%;
   margin-bottom: 0;
  }
 `;
 
 const Select = styled.select `
 background-color: ${colors.light};
+color: ${colors.primary};
+-webkit-appearance: none;
+-webkit-border-radius: 0px;
 margin-bottom:12px;
 margin-right:12px;
 padding-left:14px;
 border: 1px solid ${colors.primary};
-height:36px;;
-width:192px;
+height: 36px;;
+width: 25%;
 @media (min-width: 768px) {
   margin-bottom: 0;
  }

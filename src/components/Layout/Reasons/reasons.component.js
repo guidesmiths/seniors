@@ -12,12 +12,16 @@ import {Flex} from '../../Styles/Flex';
 
 
 const MainContainer = styled.div`
-background-color: ${colors.primary};
+background-color: ${colors.medium};
 width: 100%;
 padding-bottom: 30px;
 @media (min-width: 768px) {
    padding-top: 100px;
  }
+ @media (min-width: 1024px) {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
 `;
 
 const ItemIcon = styled.div`
