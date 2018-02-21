@@ -1,14 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./search.css";
-import logo from '../../../logo.svg';
 import Header from '../../Layout/Header/header.component';
-import CardContainer1 from '../../Commons/WholeCardContainer/wholeCardContainer.component';
-
-import { Button } from 'reactstrap';
-
 import Filter from '../../Commons/Filter/filter.container';
-import CardList from '../../Commons/CardList/cardList.container';
+//import CardList from '../../Commons/CardList/cardList.container';
+import SmallCard from '../../Commons/SmallCard/smallCard.component';
+import {Flex} from '../../Styles/Flex';
+import {colors} from '../../Styles/Variables';
 
 export default class Search extends React.Component {
 	constructor(props){
@@ -24,11 +21,19 @@ export default class Search extends React.Component {
 		const { value } = this.props;
 		return(
 			<div>
-				<Header />
-				<div className="App">
+
+				<Header style={{background: 'blue'}}/>
+				<Flex backgroundFlex={'#24b8ca'}>
 					<Filter />
-					<CardContainer1 />
-				</div>
+					<Flex boxWidth={'70%'}  >
+						<Flex boxWidth={'100%'} backgroundFlex={'red'} justify={'space-between'}>
+							<SmallCard />
+							<SmallCard />
+							<SmallCard />
+							<SmallCard />
+						</Flex>
+					</Flex>
+				</Flex>
 			</div>
 		);
 	}
