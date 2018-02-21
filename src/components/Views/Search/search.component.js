@@ -37,4 +37,7 @@ Search.propTypes = {
 	setValue: PropTypes.func
 };
 
+
+
+
 //<CardList />

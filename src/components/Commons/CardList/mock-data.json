@@ -15,7 +15,7 @@
             "languages": [ "Español", "Vasco", "Francés"],
             "duties": [ "Lavar", "Planchar", "Cocinar", "Enfermería"]
         },
-        "score": 3,
+        "score": "★★★✩✩",
         "price": {
             "range": {
                 "from": 9,
@@ -40,7 +40,7 @@
             "languages": [ "Español", "Inglés"],
             "duties": [ "Lavar", "Enfermería"]
         },
-        "score": 4,
+        "score": "★★★★✩",
         "price": {
             "range": {
                 "from": 10,
@@ -65,7 +65,7 @@
             "languages": [ "Español", "Gallego"],
             "duties": [ "Lavar", "Cocinar"]
         },
-        "score": 2,
+        "score": "★★✩✩✩",
         "price": {
             "range": {
                 "from": 8,
