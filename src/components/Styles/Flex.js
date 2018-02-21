@@ -14,6 +14,7 @@ margin: ${props => props.marginBox || '0px'};
 background: ${props => props.backgroundFlex || '#fff'};
 height: ${props => props.boxHeight || 'auto'};
 border: ${props => props.boxBorder || 'none'};
+flex-wrap: ${props => props.flexWrap || 'nowrap'};
 
 @media (min-width: 768px) {
   flex-direction: ${props => props.directionLg || 'row'};

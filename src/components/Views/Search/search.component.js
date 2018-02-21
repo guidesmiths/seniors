@@ -26,7 +26,8 @@ export default class Search extends React.Component {
 				<Flex backgroundFlex={'#24b8ca'}>
 					<Filter />
 					<Flex boxWidth={'70%'}  >
-						<Flex boxWidth={'100%'} backgroundFlex={'red'} justify={'space-between'}>
+						<Flex boxWidth={'100%'} backgroundFlex={'red'} justify={'flex-start'} flexWrap={'wrap'}>
+							<SmallCard />
 							<SmallCard />
 							<SmallCard />
 							<SmallCard />

@@ -7,7 +7,7 @@ import {Button} from '../../Styles/Buttons';
 
 export const CardImage = styled.img`
 border: 2px solid ${colors.secondary};
-width: 50%;
+width: 35%;
 border-radius: 50px;
 `;
 
@@ -32,7 +32,7 @@ text-align: center;
 class SmallCard extends React.Component {
 	render(){
 		return(
-			<Flex boxWidth={'20%'}  backgroundFlex={'#fff'} directionLg={'column'} paddingBottom={'10px'} paddingTop={'10px'}>
+			<Flex boxWidth={'22%'}  backgroundFlex={'#fff'} directionLg={'column'} paddingBottom={'10px'} paddingTop={'10px'} marginBox={'12px'}>
 				<CardImage src={this.props.image} alt={'assistant-photo'} />
 				<Score>★★★✩✩</Score>
 				<Name>Laura Sanchez</Name>
