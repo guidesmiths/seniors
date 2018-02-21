@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Header from '../../Layout/Header/header.component';
 import Filter from '../../Commons/Filter/filter.container';
 //import CardList from '../../Commons/CardList/cardList.container';
-import SmallCard from '../../Commons/SmallCard/smallCard.component';
+import SmallCardsComponent from '../../Commons/SmallCardsComponent/smallCardsComponent.component';
 import {Flex} from '../../Styles/Flex';
 import {colors} from '../../Styles/Variables';
 
@@ -21,19 +21,10 @@ export default class Search extends React.Component {
 		const { value } = this.props;
 		return(
 			<div>
-
 				<Header style={{background: 'blue'}}/>
 				<Flex backgroundFlex={'#24b8ca'}>
 					<Filter />
-					<Flex boxWidth={'70%'}  >
-						<Flex boxWidth={'100%'} backgroundFlex={'red'} justify={'flex-start'} flexWrap={'wrap'}>
-							<SmallCard />
-							<SmallCard />
-							<SmallCard />
-							<SmallCard />
-							<SmallCard />
-						</Flex>
-					</Flex>
+					<SmallCardsComponent />
 				</Flex>
 			</div>
 		);
