@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./cardList.css";
+
 import Card from "../Card/card.container";
 import data from './mock-data.json';
 
