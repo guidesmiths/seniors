@@ -1,10 +1,10 @@
 import { Badge } from "reactstrap";
 import React from "react";
 import PropTypes from "prop-types";
-
 import {Flex} from '../../Styles/Flex';
 import {colors} from '../../Styles/Variables';
 import {Button} from '../../Styles/Buttons';
+
 const CardItem= Flex.extend `
 background: #fff;
   border-radius: 4px;
@@ -29,24 +29,6 @@ export default class Card extends React.Component {
 				<Flex directionLg={'column'} boxWidth= {'auto'} marginBox= {'10px'}>
 					<img src={personal.avatar}  alt={personal.name}></img>
 					<p >{price.range.from}-{price.range.to}{price.currency}/h</p>
-				</Flex>
-				<Flex directionLg={'column'} boxWidth= {'auto'} marginBox= {'10px'}>
-					<Flex justify={'space-between'}>
-						<Flex>
-							<h2>{personal.name}</h2>
-							<img src={personal.country.flag}  width="20" height="20">
-							</img>
-							<h2>{personal.age}</h2>
-						</Flex>
-						<Button> Conóceme </Button>
-					</Flex>
-					<Flex>
-						{skills.duties.map((duty) => <Badge color="primary" key={personal.id+duty+'duty'}>{duty}</Badge>)}
-					</Flex>
-					<Flex>
-						{skills.languages.map((lang) => <Badge color="secondary" key={personal.id+lang+'lang'}>{lang}</Badge>)}
-					</Flex>
-
 					<Flex>
 						<p>Puntuación:</p>
 						<p>
@@ -54,6 +36,23 @@ export default class Card extends React.Component {
 								<span key={i+new Date().getTime()} style={{color: (i + 1) <= score ? 'rgb(254, 221, 167)' : 'rgb(216, 216, 216)', fontSize: '40px'}}>•</span>
 							)}
 						</p>
+					</Flex>
+				</Flex>
+				<Flex directionLg={'column'} boxWidth= {'auto'} marginBox= {'10px'}>
+					<Flex >
+						<Flex justify={'flex-start'}>
+							<h2>{personal.name}</h2>
+							<img src={personal.country.flag}  width="20" height="20">
+							</img>
+							<h2>{personal.age}</h2>
+						</Flex>
+						<Button> Conóceme </Button>
+					</Flex>
+					<Flex justify={'flex-start'}>
+						{skills.duties.map((duty) => <Badge color="primary" key={personal.id+duty+'duty'}>{duty}</Badge>)}
+					</Flex>
+					<Flex justify={'flex-start'}>
+						{skills.languages.map((lang) => <Badge color="secondary" key={personal.id+lang+'lang'}>{lang}</Badge>)}
 					</Flex>
 					<p>{personal.description}</p>
 				</Flex>
