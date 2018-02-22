@@ -22,7 +22,8 @@ export default class Search extends React.Component {
 		return(
 			<div>
 				<Header style={{background: 'blue'}}/>
-				<Flex backgroundFlex={'#24b8ca'}>
+				<Flex backgroundFlex={'#24b8ca'} align={'flex-start'}>
+
 					<Filter />
 					<SmallCardsComponent />
 				</Flex>
@@ -36,5 +37,3 @@ Search.propTypes = {
 	value: PropTypes.number,
 	setValue: PropTypes.func
 };
-
-//<CardList />
