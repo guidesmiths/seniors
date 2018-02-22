@@ -12,8 +12,8 @@
             }
         },
         "skills": {
-            "languages": [ "Español", "Vasco", "Francés"],
-            "duties": [ "Lavar", "Planchar", "Cocinar", "Enfermería"]
+            "languages": [ "Español,", " Vasco,", " Francés"],
+            "duties": [ "Lavar,", " Planchar, ", " Cocinar, ", " Enfermería"]
         },
         "score": 3,
         "price": {
@@ -37,8 +37,8 @@
             }
         },
         "skills": {
-            "languages": [ "Español", "Inglés"],
-            "duties": [ "Lavar", "Enfermería"]
+            "languages": [ "Español,", " Inglés"],
+            "duties": [ "Lavar,", " Enfermería"]
         },
         "score": 4,
         "price": {
@@ -62,8 +62,8 @@
             }
         },
         "skills": {
-            "languages": [ "Español", "Gallego"],
-            "duties": [ "Lavar", "Cocinar"]
+            "languages": [ "Español,", " Gallego"],
+            "duties": [ "Lavar,", " Cocinar"]
         },
         "score": 2,
         "price": {
@@ -79,7 +79,7 @@
         "personal": {
             "avatar": "http://www.artofhustle.com/wp-content/uploads/featured/default-avatar_150x150.jpg",
             "name": "Marionne Bovary",
-            "age": 27,
+            "age": 24,
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "country": {
                 "flag": "https://cdn.jsdelivr.net/emojione/assets/png/1f1ec-1f1e7.png?v=2.2.7",
@@ -87,8 +87,8 @@
             }
         },
         "skills": {
-            "languages": [ "Español", "Gallego"],
-            "duties": [ "Lavar", "Cocinar"]
+            "languages": [ "Español,", " Francés"],
+            "duties": [ "Lavar,", " Cocinar"]
         },
         "score": 3,
         "price": {
@@ -104,7 +104,7 @@
         "personal": {
             "avatar": "http://www.artofhustle.com/wp-content/uploads/featured/default-avatar_150x150.jpg",
             "name": "Diana Veiga",
-            "age": 27,
+            "age": 31,
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "country": {
                 "flag": "https://cdn.jsdelivr.net/emojione/assets/png/1f1ec-1f1e7.png?v=2.2.7",
@@ -112,8 +112,8 @@
             }
         },
         "skills": {
-            "languages": [ "Español", "Gallego"],
-            "duties": [ "Lavar", "Cocinar"]
+            "languages": [ "Español,", " Gallego"],
+            "duties": [ "Lavar,", " Cocinar"]
         },
         "score": 5,
         "price": {
@@ -129,7 +129,7 @@
         "personal": {
             "avatar": "http://www.artofhustle.com/wp-content/uploads/featured/default-avatar_150x150.jpg",
             "name": "Gemma Beferull",
-            "age": 27,
+            "age": 29,
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "country": {
                 "flag": "https://cdn.jsdelivr.net/emojione/assets/png/1f1ec-1f1e7.png?v=2.2.7",
@@ -137,8 +137,8 @@
             }
         },
         "skills": {
-            "languages": [ "Español", "Gallego"],
-            "duties": [ "Lavar", "Cocinar"]
+            "languages": [ "Español,", " Catalan"],
+            "duties": [ "Lavar,", " Cocinar"]
         },
         "score": 5,
         "price": {
@@ -154,7 +154,7 @@
         "personal": {
             "avatar": "http://www.artofhustle.com/wp-content/uploads/featured/default-avatar_150x150.jpg",
             "name": "Sara Peirce",
-            "age": 27,
+            "age": 30,
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "country": {
                 "flag": "https://cdn.jsdelivr.net/emojione/assets/png/1f1ec-1f1e7.png?v=2.2.7",
@@ -162,8 +162,8 @@
             }
         },
         "skills": {
-            "languages": [ "Español", "Gallego"],
-            "duties": [ "Lavar", "Cocinar"]
+            "languages": [ "Español, ", " Italiano"],
+            "duties": [ "Lavar,", " Cocinar"]
         },
         "score": 5,
         "price": {
@@ -179,7 +179,7 @@
         "personal": {
             "avatar": "http://www.artofhustle.com/wp-content/uploads/featured/default-avatar_150x150.jpg",
             "name": "Juan Fernández",
-            "age": 27,
+            "age": 35,
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "country": {
                 "flag": "https://cdn.jsdelivr.net/emojione/assets/png/1f1ec-1f1e7.png?v=2.2.7",
@@ -187,8 +187,8 @@
             }
         },
         "skills": {
-            "languages": [ "Español", "Gallego"],
-            "duties": [ "Lavar", "Cocinar"]
+            "languages": [ "Español, ", " Italiano"],
+            "duties": [ "Lavar,", " Cocinar"]
         },
         "score": 4,
         "price": {
@@ -203,8 +203,8 @@
         "id": 8,
         "personal": {
             "avatar": "http://www.artofhustle.com/wp-content/uploads/featured/default-avatar_150x150.jpg",
-            "name": "Mary Raia",
-            "age": 27,
+            "name": "Maribel Raia",
+            "age": 30,
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "country": {
                 "flag": "https://cdn.jsdelivr.net/emojione/assets/png/1f1ec-1f1e7.png?v=2.2.7",
@@ -212,8 +212,8 @@
             }
         },
         "skills": {
-            "languages": [ "Español", "Gallego"],
-            "duties": [ "Lavar", "Cocinar"]
+            "languages": [ "Español,", " Portuguese"],
+            "duties": [ "Lavar,", " Cocinar"]
         },
         "score": 4,
         "price": {
@@ -228,8 +228,8 @@
         "id": 9,
         "personal": {
             "avatar": "http://www.artofhustle.com/wp-content/uploads/featured/default-avatar_150x150.jpg",
-            "name": "Giovanni Torre",
-            "age": 27,
+            "name": "Juan Torres",
+            "age": 34,
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "country": {
                 "flag": "https://cdn.jsdelivr.net/emojione/assets/png/1f1ec-1f1e7.png?v=2.2.7",
@@ -237,10 +237,10 @@
             }
         },
         "skills": {
-            "languages": [ "Español", "Gallego"],
-            "duties": [ "Lavar", "Cocinar"]
+            "languages": [ "Español,", " Portuguese"],
+            "duties": [ "Lavar,", " Cocinar"]
         },
-        "score": 3,
+        "score": 4,
         "price": {
             "range": {
                 "from": 8,
@@ -253,8 +253,8 @@
         "id": 10,
         "personal": {
             "avatar": "http://www.artofhustle.com/wp-content/uploads/featured/default-avatar_150x150.jpg",
-            "name": "Massimo Simeone",
-            "age": 27,
+            "name": "Max Simeone",
+            "age": 31,
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "country": {
                 "flag": "https://cdn.jsdelivr.net/emojione/assets/png/1f1ec-1f1e7.png?v=2.2.7",
@@ -262,10 +262,10 @@
             }
         },
         "skills": {
-            "languages": [ "Español", "Gallego"],
-            "duties": [ "Lavar", "Cocinar"]
+            "languages": [ "Español,", " Italiano"],
+            "duties": [ "Lavar,", " Cocinar"]
         },
-        "score": 3,
+        "score": 4,
         "price": {
             "range": {
                 "from": 8,
@@ -278,8 +278,8 @@
         "id": 11,
         "personal": {
             "avatar": "http://www.artofhustle.com/wp-content/uploads/featured/default-avatar_150x150.jpg",
-            "name": "Martin Nijkerk",
-            "age": 27,
+            "name": "Concepción Castillo",
+            "age": 32,
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "country": {
                 "flag": "https://cdn.jsdelivr.net/emojione/assets/png/1f1ec-1f1e7.png?v=2.2.7",
@@ -287,10 +287,10 @@
             }
         },
         "skills": {
-            "languages": [ "Español", "Gallego"],
-            "duties": [ "Lavar", "Cocinar"]
+            "languages": [ "Español,", " Aleman"],
+            "duties": [ "Lavar,", " Cocinar"]
         },
-        "score": 2,
+        "score": 4,
         "price": {
             "range": {
                 "from": 8,
@@ -303,8 +303,8 @@
         "id": 12,
         "personal": {
             "avatar": "http://www.artofhustle.com/wp-content/uploads/featured/default-avatar_150x150.jpg",
-            "name": "José Dominguez",
-            "age": 27,
+            "name": "Domingo Ricardos",
+            "age": 38,
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "country": {
                 "flag": "https://cdn.jsdelivr.net/emojione/assets/png/1f1ec-1f1e7.png?v=2.2.7",
@@ -312,10 +312,10 @@
             }
         },
         "skills": {
-            "languages": [ "Español", "Gallego"],
-            "duties": [ "Lavar", "Cocinar"]
+            "languages": [ "Español,", " Portuguese"],
+            "duties": [ "Lavar,", " Cocinar"]
         },
-        "score": 2,
+        "score": 4,
         "price": {
             "range": {
                 "from": 8,
@@ -328,8 +328,8 @@
         "id": 13,
         "personal": {
             "avatar": "http://www.artofhustle.com/wp-content/uploads/featured/default-avatar_150x150.jpg",
-            "name": "John May",
-            "age": 27,
+            "name": "Francisca Andry",
+            "age": 36,
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "country": {
                 "flag": "https://cdn.jsdelivr.net/emojione/assets/png/1f1ec-1f1e7.png?v=2.2.7",
@@ -337,10 +337,10 @@
             }
         },
         "skills": {
-            "languages": [ "Español", "Gallego"],
-            "duties": [ "Lavar", "Cocinar"]
+            "languages": [ "Español,", " Inglés"],
+            "duties": [ "Lavar,", " Cocinar"]
         },
-        "score": 2,
+        "score": 4,
         "price": {
             "range": {
                 "from": 8,

@@ -35,6 +35,9 @@ class SmallCardsComponent extends React.Component {
 							return (
 								<div key={assistant.personal.id}>
 									<SmallCard name={assistant.personal.name} photo={assistant.personal.avatar} fromPrice={assistant.price.range.from} toPrice={assistant.price.range.to}
+										age={assistant.personal.age + ' años'}
+										skills={assistant.skills.duties}
+										languages={assistant.skills.languages}
 										score={assistantScore} />
 								</div>
 							);

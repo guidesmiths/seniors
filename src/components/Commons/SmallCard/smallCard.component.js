@@ -24,6 +24,37 @@ font-size: 20px;
 text-align: center;
 `;
 
+export const Age = styled.p`
+color: ${colors.secondary};
+font-size: 12px;
+margin-top: -20px;
+text-align: center;
+`;
+
+export const Skills = styled.p`
+color: ${colors.secondary};
+font-size: 12px;
+text-align: center;
+background: blue;
+color: #fff;
+display; inline;
+margin-top: -5px;
+margin-bottom: 10px;
+margin-left: 10px;
+margin-right: 10px;
+`;
+
+export const Languages = styled.p`
+color: ${colors.secondary};
+font-size: 12px;
+text-align: center;
+background: red;
+color: #fff;
+display; inline;
+margin-top: -5px;
+margin-bottom: 2px;
+`;
+
 export const Price = styled.p`
 color: ${colors.secondary};
 font-size: 10px;
@@ -42,6 +73,9 @@ class SmallCard extends React.Component {
 				<CardImage src={this.props.photo} alt={'assistant-photo'} />
 				<Score>{this.props.score}</Score>
 				<Name>{this.props.name}</Name>
+				<Age>{this.props.age}</Age>
+				<Skills>{this.props.skills}</Skills>
+				<Languages>{this.props.languages}</Languages>
 				<Price>{this.props.fromPrice} - {this.props.toPrice} €/h</Price>
 				<Button>Conoceme</Button>
 			</Flex>
