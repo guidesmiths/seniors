@@ -25,7 +25,7 @@ export default class Card extends React.Component {
 		console.log(this.props.personal);
 		const { personal, price, skills, score } = this.props.assistant;
 		return(
-			<CardItem key={personal.id} backgroundFlex= {'colors.primary'} boxWidth= {'70%'} marginBox= {'10px auto 20px'}>
+			<CardItem key={personal.id} backgroundFlex= {'colors.primary'} boxWidth= {'90%'} marginBox= {'10px auto 20px'} justify={'flex-end'}>
 				<Flex directionLg={'column'} boxWidth= {'auto'} marginBox= {'10px'}>
 					<img src={personal.avatar}  alt={personal.name}></img>
 					<p >{price.range.from}-{price.range.to}{price.currency}/h</p>
