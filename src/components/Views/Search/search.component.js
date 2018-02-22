@@ -2,11 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import Header from '../../Layout/Header/header.component';
 import Filter from '../../Commons/Filter/filter.container';
-//import CardList from '../../Commons/CardList/cardList.container';
+import CardList from '../../Commons/CardList/cardList.container';
 import SmallCardsComponent from '../../Commons/SmallCardsComponent/smallCardsComponent.component';
-import BigCard from '../../Commons/BigCards/bigCard.component';
 import {Flex} from '../../Styles/Flex';
 import {colors} from '../../Styles/Variables';
+
 
 
 export default class Search extends React.Component {
@@ -28,7 +28,8 @@ export default class Search extends React.Component {
 					<Filter />
 					<SmallCardsComponent />
 				</Flex>
-				<BigCard />
+
+				<CardList />
 			</div>
 		);
 	}
