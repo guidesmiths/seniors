@@ -7,11 +7,11 @@ import  {ButtonSearch} from '../../Styles/Buttons';
 import { BrowserRouter as Router, Switch, Route, Redirect, Link } from 'react-router-dom';
 
 const InputContainer = Flex.extend`
-z-index: 1;
-background-color: ${colors.light};
-padding: 36px 64px;
-transition: width 1s;
-@media (min-width: 768px) {
+  z-index: 1;
+  background-color: ${colors.light};
+  padding: 36px 64px;
+  transition: width 1s;
+  @media (min-width: 768px) {
     position:absolute;
     left: 0;
     right: 0;
@@ -21,40 +21,47 @@ transition: width 1s;
     margin-right:auto;
     margin-top:-60px;
     box-shadow: 0px 3px 7px 0 rgba(0, 0, 0, 0.36);
-    }
+  }
 `;
 
 const Input = styled.input `
-margin-bottom:12px;
-margin-right:12px;
-border: 1px solid ${colors.primary};
-color: ${colors.primary};
-padding-left:14px;
-height:36px;
-width:192px;
-&::placeholder{
+  margin-bottom:12px;
+  border: 1px solid ${colors.primary};
   color: ${colors.primary};
-}
-@media (min-width: 768px) {
-  width: 45%;
-  margin-bottom: 0;
- }
+  padding-left: 14px;
+  height: 36px;
+  width: 100%;
+  &::placeholder{
+    color: ${colors.primary};
+  }
+  @media (min-width: 768px) {
+    width: 40%;
+    margin-right:12px;
+    margin-bottom: 0;
+  }
+  @media (min-width: 1024px) {
+    width: 45%;
+  }
 `;
 
 const Select = styled.select `
-background-color: ${colors.light};
-color: ${colors.primary};
--webkit-appearance: none;
--webkit-border-radius: 0px;
-margin-bottom:12px;
-margin-right:12px;
-padding-left:14px;
-border: 1px solid ${colors.primary};
-height: 36px;;
-width: 25%;
-@media (min-width: 768px) {
-  margin-bottom: 0;
- }
+  background-color: ${colors.light};
+  color: ${colors.primary};
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  margin-bottom:12px;
+  padding-left:14px;
+  border: 1px solid ${colors.primary};
+  height: 36px;;
+  width: 100%;
+  @media (min-width: 768px) {
+    margin-right:12px;
+    margin-bottom: 0;
+    width: 40%;
+  }
+  @media (min-width: 1024px) {
+    width: 25%;
+  }
 `;
 
 
