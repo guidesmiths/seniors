@@ -5,6 +5,7 @@ import SmallCard from '../SmallCard/smallCard.component';
 import {Flex} from '../../Styles/Flex';
 import {colors} from '../../Styles/Variables';
 import data from '../CardList/mock-data.json';
+import {IconButton} from '../../Styles/IconButton';
 
 
 class SmallCardsComponent extends React.Component {
@@ -15,7 +16,13 @@ class SmallCardsComponent extends React.Component {
 	//   }
 	render(){
 		return(
-			<Flex boxWidth={'70%'}>
+			<Flex boxWidth={'70%'} directionLg={'column'} marginTop={'50px'}>
+
+				<Flex boxWidth={'100%'} backgroundFlex={'red'} justify={'flex-start'} flexWrap={'wrap'}>
+					<IconButton>★</IconButton>
+				</Flex>
+
+
 				<Flex boxWidth={'100%'} backgroundFlex={'red'} justify={'flex-start'} flexWrap={'wrap'}>
 
 					{data.sort(function(a, b){return b.score-a.score;})
