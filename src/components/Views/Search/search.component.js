@@ -50,7 +50,7 @@ export default class Search extends React.Component {
 				<Header />
 				<Flex backgroundFlex={'#24b8ca'} align={'flex-start'} paddingTop={'72px'} paddingTopLg={'72px'} >
 					<Filter />
-					<Flex directionLg={'column'} boxWidth= {'70%'}>
+					<Flex directionLg={'column'} boxWidth= {'70%'} align= {'flex-end'}>
 						<SearchNav listClickChangeComponent= {this.handleClickChangeComponent} listClickChangeBack= {this.handleClickChangeBack}/>
 						{this.renderItems()}
 					</Flex>
