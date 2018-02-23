@@ -58,7 +58,7 @@ export default class Search extends React.Component {
 		//const listType = this.state.smallCardsView ? 'SmallCardsComponent' : 'CardList';
 		return(
 			<div >
-				<Header />
+				<Header appearance="solid" />
 				<Flex backgroundFlex={'#24b8ca'} align={'flex-start'} paddingTop={'72px'} paddingTopLg={'72px'} >
 					<Filter />
 					<Flex directionLg={'column'} boxWidth= {'70%'} align= {'flex-end'}>
