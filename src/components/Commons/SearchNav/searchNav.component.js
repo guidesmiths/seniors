@@ -6,6 +6,7 @@ import Grid from '../../../img/grid.png';
 
 
 const NavStyle = styled.nav `
+border: 1px solid red;
 	visibility: hidden;
 	padding-right:5%;
 		ul {
@@ -16,7 +17,6 @@ const NavStyle = styled.nav `
 	}
 	@media (min-width: 1024px) {
 		visibility: visible;
-
 	}
 `;
 

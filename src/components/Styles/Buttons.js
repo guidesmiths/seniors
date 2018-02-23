@@ -40,12 +40,12 @@ font-weight: 700;
 color: ${colors.light};
 display; inline;
 cursor: pointer;
-margin-top:72px;
+transition: color ease .6s, background ease .6s;
 &:hover {
-         color: ${colors.secondary};
-         background: ${colors.light};
-     }
+		 color: ${colors.secondary};
+		 background: ${colors.light};
+	 }
 @media (min-width: 768px) {
-  font-size: 16px;
+   font-size: 16px;
 }
 `;
