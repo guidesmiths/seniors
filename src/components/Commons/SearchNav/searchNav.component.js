@@ -1,23 +1,21 @@
 import React from "react";
-import PropTypes from "prop-types";
 import styled from 'styled-components';
 import ListIcon from '../../../img/list-icon.png';
 import Grid from '../../../img/grid.png';
 
 
 const NavStyle = styled.nav `
-border: 1px solid red;
-	visibility: hidden;
-	padding-right:5%;
-		ul {
-			display: flex;
-			flex-direction:row;
-			list-style: none;
-		}
-	}
+
+	display:none;
 	@media (min-width: 1024px) {
-		visibility: visible;
+    display:block;
+    padding-right:5%;
+    ul {
+    display: flex;
+    flex-direction:row;
+    list-style: none;
 	}
+}
 `;
 
 
