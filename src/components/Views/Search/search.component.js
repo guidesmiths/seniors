@@ -15,27 +15,38 @@ export default class Search extends React.Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			layout: 'grid'
+			layout: 'grid',
+			smallScreen: false
 		};
-		this.handleClickChangeComponent = this.handleClickChangeComponent.bind(this);
-		this.handleClickChangeBack= this.handleClickChangeBack.bind(this);
 	}
 
-	handleClickChangeComponent(){
+	handleClickChangeComponent = () => {
 		this.setState( {layout: 'list'});
 	}
 
-	handleClickChangeBack(){
+	handleClickChangeBack = () => {
 		this.setState( {layout: 'grid'});
 	}
 
+	checkScreenSize = () => {
+		if (window.innerWidth < 1024){
+			this.setState( {smallScreen: true});
+		} else {
+			this.setState( {smallScreen: false});
+		}
+	};
+
+	componentDidMount(){
+		this.checkScreenSize();
+		window.addEventListener('resize', this.checkScreenSize);
+	}
 
 	changeNumber = (value) => {
 		this.props.setValue(value);
 	}
 
 	renderItems() {
-		if (this.state.layout === 'grid') {
+		if (this.state.layout === 'grid' || this.state.smallScreen) {
 			return <SmallCardsComponent />;
 		} else {
 			return <CardList />;
