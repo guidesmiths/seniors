@@ -118,8 +118,8 @@
         "score": 5,
         "price": {
             "range": {
-                "from": 8,
-                "to": 15
+                "from": 9,
+                "to": 16
             },
             "currency": "€"
         }
@@ -143,8 +143,8 @@
         "score": 5,
         "price": {
             "range": {
-                "from": 8,
-                "to": 15
+                "from": 7,
+                "to": 12
             },
             "currency": "€"
         }
@@ -193,7 +193,7 @@
         "score": 4,
         "price": {
             "range": {
-                "from": 8,
+                "from": 10,
                 "to": 15
             },
             "currency": "€"
@@ -218,8 +218,8 @@
         "score": 4,
         "price": {
             "range": {
-                "from": 8,
-                "to": 15
+                "from": 9,
+                "to": 13
             },
             "currency": "€"
         }
@@ -244,7 +244,7 @@
         "price": {
             "range": {
                 "from": 8,
-                "to": 15
+                "to": 14
             },
             "currency": "€"
         }
@@ -268,8 +268,8 @@
         "score": 4,
         "price": {
             "range": {
-                "from": 8,
-                "to": 15
+                "from": 6,
+                "to": 14
             },
             "currency": "€"
         }
@@ -293,8 +293,8 @@
         "score": 4,
         "price": {
             "range": {
-                "from": 8,
-                "to": 15
+                "from": 10,
+                "to": 18
             },
             "currency": "€"
         }
@@ -318,8 +318,8 @@
         "score": 4,
         "price": {
             "range": {
-                "from": 8,
-                "to": 15
+                "from": 10,
+                "to": 20
             },
             "currency": "€"
         }
