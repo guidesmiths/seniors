@@ -34,6 +34,7 @@ export const ButtonSearch = Button.extend`
 export const IconButton = styled.button`
 background: ${colors.secondary};
 border: 2px solid ${colors.secondary};
+margin-left:10px;
 width: 32px;
 height: 32px;
 font-weight: 700;

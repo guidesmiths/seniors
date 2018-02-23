@@ -38,11 +38,12 @@ class SmallCardsComponent extends React.Component {
 
 		return(
 			<Flex boxWidth={'100%'} directionLg={'column'} marginTop={'50px'}>
-				<IconButton onClick={this.updateSort}>★</IconButton>
-				<Flex boxWidth={'100%'} backgroundFlex={'red'} justify={'flex-start'} flexWrap={'wrap'}>
-
+				<Flex directionLg={'row'} justify={'flex-end'} paddingRight= {'5%'}>
+					<p>Ordenar por:</p>
+					<IconButton onClick={this.updateSort}>★</IconButton>
+					<IconButton>€</IconButton>
 				</Flex>
-				<Flex boxWidth={'100%'} backgroundFlex={'red'} justify={'flex-start'} flexWrap={'wrap'}>
+				<Flex boxWidth={'100%'} justify={'flex-center'} flexWrap={'wrap'}>
 
 					{itemList.map((assistant)=>{
 						return (
