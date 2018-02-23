@@ -14,7 +14,7 @@ export default class CardList extends React.Component {
 	render(){
 		console.log(this.props);
 		return(
-			<Flex directionLg={'column'} boxWidth= {'70%'}>
+			<Flex directionLg={'column'}>
 				{data.map((as, i)=><Card key={as.id} assistant={as} />)}
 			</Flex>
 		);

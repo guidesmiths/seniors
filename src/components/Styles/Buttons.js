@@ -28,3 +28,24 @@ export const ButtonSearch = Button.extend`
    margin:0;
  }
 `;
+
+
+
+export const IconButton = styled.button`
+background: ${colors.secondary};
+border: 2px solid ${colors.secondary};
+width: 32px;
+height: 32px;
+font-weight: 700;
+color: ${colors.light};
+display; inline;
+cursor: pointer;
+margin-top:72px;
+&:hover {
+         color: ${colors.secondary};
+         background: ${colors.light};
+     }
+@media (min-width: 768px) {
+  font-size: 16px;
+}
+`;

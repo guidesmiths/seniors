@@ -16,6 +16,7 @@ height: ${props => props.boxHeight || 'auto'};
 border: ${props => props.boxBorder || 'none'};
 flex-wrap: ${props => props.flexWrap || 'nowrap'};
 
+
 @media (min-width: 768px) {
   flex-direction: ${props => props.directionLg || 'row'};
   padding-top: ${props => props.paddingTopLg || '0px'};

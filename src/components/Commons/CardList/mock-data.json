@@ -168,8 +168,8 @@
         "score": 5,
         "price": {
             "range": {
-                "from": 8,
-                "to": 15
+                "from": 15,
+                "to": 20
             },
             "currency": "€"
         }
