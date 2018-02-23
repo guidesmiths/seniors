@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from 'styled-components';
 import {Button} from '../../Styles/Buttons';
 import {colors} from '../../Styles/Variables';
-import Reason from "../../Commons/Reason/reason.components";
+import Reason from "../../Commons/Reason/reason.component";
 import IconA from '../../../img/icon-a.svg';
 import IconB from '../../../img/icon-b.svg';
 import IconC from '../../../img/icon-c.svg';
