@@ -1,16 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { 
-	Grid,
-	Col,
-	Row,
-	FormControl,
-	Button
-} from 'react-bootstrap';
-
 import Spinner from '../../Commons/Spinner/spinner.container';
+import Header from '../../Layout/Header/header.component';
 
-import "./login.css";
+
 
 
 export default class Login extends React.Component {
@@ -34,62 +27,63 @@ export default class Login extends React.Component {
 		this.props.history.replace('/');
 	}
 
-	render(){  
+	render(){
 		return(
-			<Grid className="container">
-				<Row id="pwd-container">
-					<Col md={4}></Col>
-					<Col md={4}>
-						<section className="login-form">
-							<div role="login">
+			<div>
 
-								<h1>Seniors</h1>
+				<Header appearance="solid"/>
+				<div id="pwd-container">
 
-								<FormControl
-									type="email"
-									name="email"
-									id="email"
-									required
-									className="form-control input-lg"
-									value={this.state.email}
-									placeholder="Email"
-									onChange={this.handleChange}
-								/>
+					<section className="login-form">
 
-								<FormControl
-									type="password"
-									name="password"
-									id="password"
-									required=""
-									className="form-control input-lg"
-									value={this.state.password}
-									placeholder="Password"
-									onChange={this.handleChange}
-								/>
+						<div role="login">
 
-								{ this.props.isChecking && <Spinner/>}
-								{ this.props.error && <div className="errorBox">{this.props.error}</div>}
+							<h1>Seniors</h1>
 
-								<Button id="submit" type="submit" name="go" className="btn btn-lg btn-primary btn-block" onClick={()=>this.props.login(this.state.email, this.state.password, this.onSuccess)}>
+							<div
+								type="email"
+								name="email"
+								id="email"
+								required
+								className="form-control input-lg"
+								value={this.state.email}
+								placeholder="Email"
+								onChange={this.handleChange}
+							/>
+
+							<div
+								type="password"
+								name="password"
+								id="password"
+								required=""
+								className="form-control input-lg"
+								value={this.state.password}
+								placeholder="Password"
+								onChange={this.handleChange}
+							/>
+
+							{ this.props.isChecking && <Spinner/>}
+							{ this.props.error && <div className="errorBox">{this.props.error}</div>}
+
+							<button id="submit" type="submit" name="go" className="btn btn-lg btn-primary btn-block" onClick={()=>this.props.login(this.state.email, this.state.password, this.onSuccess)}>
 									Sign in
-								</Button>
-								
-								<div>
-									<a onClick={()=>this.props.history.replace('/')}>Create account</a> or <a onClick={()=>this.props.history.replace('/')}>reset password</a>
-								</div>
+							</button>
 
+							<div>
+								<a onClick={()=>this.props.history.replace('/')}>Create account</a> or <a onClick={()=>this.props.history.replace('/')}>reset password</a>
 							</div>
 
-							<div className="form-links">
-								<a onClick={()=>this.props.history.replace('/')}>www.seniors.com</a>
-							</div>
+						</div>
 
-						</section>  
-					</Col>
-					<Col md={4}></Col>
-				</Row>
-				
-			</Grid>
+						<div className="form-links">
+							<a onClick={()=>this.props.history.replace('/')}>www.seniors.com</a>
+						</div>
+
+					</section>
+
+				</div>
+
+			</div>
 		);
 	}
 

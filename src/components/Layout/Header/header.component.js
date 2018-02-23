@@ -4,9 +4,9 @@ import styled from 'styled-components';
 import Logo from '../../Commons/Logo/logo.component';
 
 const HeaderStyle = styled.div `
-	background-color: rgba(255, 255, 255, ${props => props.scrolled ? 1 : 0});
-	color: ${props => props.scrolled ? '#24b8ca' : '#fff'};
-	border-bottom: 1px ${props => props.scrolled ? 'solid' : 'none'} #24b8ca;
+	background-color: rgba(255, 255, 255, ${props => props.scrolled || props.appearance ? 1 : 0});
+	color: ${props => props.scrolled || props.appearance ? '#24b8ca' : '#fff'};
+	border-bottom: 1px ${props => props.scrolled || props.appearance ? 'solid' : 'none'} #24b8ca;
 	display: flex;
 	font-weight: 700;
 	font-size: 12px;
@@ -63,7 +63,7 @@ export default class Header extends React.Component {
 
 	render() {
 		return(
-			<HeaderStyle scrolled={this.state.scrolled} >
+			<HeaderStyle appearance={this.props.appearance} scrolled={this.state.scrolled} >
 				<Logo/>
 				<nav>
 					<ul>
