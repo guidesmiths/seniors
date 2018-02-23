@@ -6,31 +6,55 @@ import CardList from '../../Commons/CardList/cardList.container';
 import SmallCardsComponent from '../../Commons/SmallCardsComponent/smallCardsComponent.component';
 import {Flex} from '../../Styles/Flex';
 import {colors} from '../../Styles/Variables';
-
+import ListIcon from '../../../img/list-icon.png';
+import Grid from '../../../img/grid.png';
+import SearchNav from '../../Commons/SearchNav/searchNav.component';
 
 
 export default class Search extends React.Component {
 	constructor(props){
 		super(props);
-		this.state = {};
+		this.state = {
+			layout: 'grid'
+		};
+		this.handleClickChangeComponent = this.handleClickChangeComponent.bind(this);
+		this.handleClickChangeBack= this.handleClickChangeBack.bind(this);
 	}
+
+	handleClickChangeComponent(){
+		this.setState( {layout: 'list'});
+	}
+
+	handleClickChangeBack(){
+		this.setState( {layout: 'grid'});
+	}
+
 
 	changeNumber = (value) => {
 		this.props.setValue(value);
 	}
 
+	renderItems() {
+		if (this.state.layout === 'grid') {
+			return <SmallCardsComponent />;
+		} else {
+			return <CardList />;
+		}
+	}
+
 	render(){
 		const { value } = this.props;
+		//const listType = this.state.smallCardsView ? 'SmallCardsComponent' : 'CardList';
 		return(
-			<div>
-				<Header style={{background: 'blue'}}/>
-				<Flex backgroundFlex={'#24b8ca'} align={'flex-start'}>
-
+			<div >
+				<Header />
+				<Flex backgroundFlex={'#24b8ca'} align={'flex-start'} paddingTop={'72px'} paddingTopLg={'72px'} >
 					<Filter />
-					<SmallCardsComponent />
+					<Flex directionLg={'column'} boxWidth= {'70%'}>
+						<SearchNav listClickChangeComponent= {this.handleClickChangeComponent} listClickChangeBack= {this.handleClickChangeBack}/>
+						{this.renderItems()}
+					</Flex>
 				</Flex>
-
-				<CardList />
 			</div>
 		);
 	}
