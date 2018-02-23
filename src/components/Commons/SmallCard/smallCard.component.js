@@ -71,7 +71,7 @@ class SmallCard extends React.Component {
 
 	render(){
 		return(
-			<Flex boxWidth={'180px'}  backgroundFlex={'#fff'} directionLg={'column'} paddingBottom={'10px'} paddingTop={'30px'} marginBox={'12px'}>
+			<Flex boxWidth={'220px'}  backgroundFlex={'#fff'} directionLg={'column'} paddingBottom={'10px'} paddingTop={'30px'} marginBox={'12px'}>
 				<CardImage src={this.props.photo} alt={'assistant-photo'} />
 				<Score>{this.props.score}</Score>
 				<Name>{this.props.name}</Name>
