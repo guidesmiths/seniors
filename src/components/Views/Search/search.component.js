@@ -10,6 +10,14 @@ import ListIcon from '../../../img/list-icon.png';
 import Grid from '../../../img/grid.png';
 import SearchNav from '../../Commons/SearchNav/searchNav.component';
 
+const CardsContainer = Flex.extend`
+justify-content: center;
+  width:100%;
+@media (min-width: 768px) {
+  width: 70%;
+}
+`;
+
 
 export default class Search extends React.Component {
 	constructor(props){
@@ -59,12 +67,12 @@ export default class Search extends React.Component {
 		return(
 			<div >
 				<Header appearance="solid" />
-				<Flex backgroundFlex={'#24b8ca'} align={'flex-start'} paddingTop={'72px'} paddingTopLg={'72px'} >
+				<Flex backgroundFlex= {'rgba(36, 184, 202, .1)'} align={'flex-start'} paddingTop={'72px'} paddingTopLg={'72px'} >
 					<Filter />
-					<Flex directionLg={'column'} boxWidth= {'70%'} align= {'flex-end'}>
+					<CardsContainer directionLg={'column'} align= {'flex-end'} justify={'center'} direction={'row'}>
 						<SearchNav listClickChangeComponent= {this.handleClickChangeComponent} listClickChangeBack= {this.handleClickChangeBack}/>
 						{this.renderItems()}
-					</Flex>
+					</CardsContainer>
 				</Flex>
 			</div>
 		);

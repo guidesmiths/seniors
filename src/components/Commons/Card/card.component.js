@@ -32,9 +32,7 @@ export default class Card extends React.Component {
 					<Flex>
 						<p>Puntuación:</p>
 						<p>
-							{[...new Array(5)].map((_, i) =>
-								<span key={i+new Date().getTime()} style={{color: (i + 1) <= score ? 'rgb(254, 221, 167)' : 'rgb(216, 216, 216)', fontSize: '40px'}}>•</span>
-							)}
+							{this.props.score}
 						</p>
 					</Flex>
 				</Flex>
