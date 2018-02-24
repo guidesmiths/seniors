@@ -38,12 +38,12 @@ class SmallCardsComponent extends React.Component {
 
 		return(
 			<Flex boxWidth={'100%'} directionLg={'column'} marginTop={'50px'}>
-				<Flex directionLg={'row'} justify={'flex-end'} paddingRight= {'5%'}>
+				<Flex direction={'row'} justify={'flex-end'} paddingRight= {'5%'}>
 					<p>Ordenar por:</p>
 					<IconButton onClick={this.updateSort}>★</IconButton>
 					<IconButton>€</IconButton>
 				</Flex>
-				<Flex boxWidth={'100%'} justify={'flex-center'} flexWrap={'wrap'}>
+				<Flex justify={'center'} boxWidth={'100%'} flexWrap={'wrap'}>
 
 					{itemList.map((assistant)=>{
 						return (
@@ -52,13 +52,14 @@ class SmallCardsComponent extends React.Component {
 								name={assistant.personal.name}
 								photo={assistant.personal.avatar} fromPrice={assistant.price.range.from} toPrice={assistant.price.range.to}
 								age={assistant.personal.age + ' años'}
-								skills={assistant.skills.duties}
+								duties={assistant.skills.duties}
 								languages={assistant.skills.languages}
 								score={this.renderScore(assistant.score)} />
 						);
 					})}
 				</Flex>
 			</Flex>
+
 		);
 	}
 }

@@ -35,7 +35,7 @@ export default class CardList extends React.Component {
 		let itemList = this.state.sortByStar ? this.orderForScores() : data;
 		return(
 			<Flex directionLg={'column'}>
-				<Flex directionLg={'row'} justify= {'flex-end'} paddingRight= {'5%'}>
+				<Flex direction={'row'} justify= {'flex-end'} paddingRight= {'5%'}>
 					<p>Ordenar por:</p>
 					<IconButton onClick={this.updateSort}>★</IconButton>
 					<IconButton>€</IconButton>

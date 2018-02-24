@@ -1,4 +1,5 @@
 import React from "react";
+import { Badge } from "reactstrap";
 import styled from 'styled-components';
 import {colors} from '../../Styles/Variables';
 import {Flex} from '../../Styles/Flex';
@@ -30,29 +31,6 @@ margin-top: -20px;
 text-align: center;
 `;
 
-export const Skills = styled.p`
-font-size: 12px;
-text-align: center;
-background: #007bff;
-color: #fff;
-display; inline;
-margin-top: -5px;
-margin-bottom: 10px;
-margin-left: 10px;
-margin-right: 10px;
-`;
-
-export const Languages = styled.p`
-color: ${colors.secondary};
-font-size: 12px;
-text-align: center;
-background: #6c757d;
-color: #fff;
-display; inline;
-margin-top: -5px;
-margin-bottom: 2px;
-`;
-
 export const Price = styled.p`
 color: ${colors.secondary};
 font-size: 10px;
@@ -61,8 +39,9 @@ text-align: center;
 
 const SmallCardContainer = Flex.extend`
 justify-content: center;
-@media (min-width: 1030px) {
-  width: 30%;
+  width:80%;
+@media (min-width: 768px) {
+  width: 40%;
 }
 @media (min-width: 1150px) {
   width: 22%;
@@ -83,10 +62,14 @@ class SmallCard extends React.Component {
 				<Score>{this.props.score}</Score>
 				<Name>{this.props.name}</Name>
 				<Age>{this.props.age}</Age>
-				<Skills>{this.props.skills}</Skills>
-				<Languages>{this.props.languages}</Languages>
+				<Flex justify={'center'}>
+					{this.props.duties.map((duty) => <Badge color="primary" key={this.props.id+duty+'duty'}>{duty}</Badge>)}
+				</Flex>
+				<Flex justify={'center'}>
+					{this.props.languages.map((lang) => <Badge color="secondary" key={this.props.id+lang+'lang'}>{lang}</Badge>)}
+				</Flex>
 				<Price>{this.props.fromPrice} - {this.props.toPrice} €/h</Price>
-				<Button>Conoceme</Button>
+				<Button>Conóceme</Button>
 			</SmallCardContainer>
 		);
 	}
