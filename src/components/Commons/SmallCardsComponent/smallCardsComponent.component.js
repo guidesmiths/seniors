@@ -11,19 +11,31 @@ import data from '../CardList/mock-data.json';
 class SmallCardsComponent extends React.Component {
 	constructor(props){
 		super(props);
-
 		this.state = {
-			sortByStar: false
+			sortByStar: false,
+			sortByPrice: false
 		};
-		this.updateSort = this.updateSort.bind(this);
 	}
 
-	orderForScores(){
-		return [...data].sort(function(a, b){return b.score-a.score;});
+		updateSort = () => {
+			this.setState({
+				sortByPrice: false,
+				sortByStar: !this.state.sortByStar });
+		}
+
+	updateByPrice = () => {
+		this.setState({
+			sortByStar: false,
+			sortByPrice: !this.state.sortByPrice });
 	}
 
-	updateSort(){
-		this.setState({ sortByStar: !this.state.sortByStar });
+	reorder = () => {
+		if (this.state.sortByPrice) {
+			return [...data].sort(function(a, b){return a.price.range.from-b.price.range.from;});
+		}
+		if (this.state.sortByStar){
+			return [...data].sort(function(a, b){return b.score-a.score;});
+		}
 	}
 
 	renderScore(score) {
@@ -34,17 +46,16 @@ class SmallCardsComponent extends React.Component {
 	}
 
 	render(){
-		let itemList = this.state.sortByStar ? this.orderForScores() : data;
+		let itemList = this.state.sortByStar || this.state.sortByPrice ? this.reorder() : data;
 
 		return(
 			<Flex boxWidth={'100%'} directionLg={'column'} marginTop={'50px'}>
 				<Flex direction={'row'} justify={'flex-end'} paddingRight= {'5%'}>
 					<p>Ordenar por:</p>
 					<IconButton onClick={this.updateSort}>★</IconButton>
-					<IconButton>€</IconButton>
+					<IconButton onClick={this.updateByPrice}>€</IconButton>
 				</Flex>
 				<Flex justify={'center'} boxWidth={'100%'} flexWrap={'wrap'}>
-
 					{itemList.map((assistant)=>{
 						return (
 							<SmallCard

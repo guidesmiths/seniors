@@ -9,19 +9,31 @@ export default class CardList extends React.Component {
 
 	constructor(props){
 		super(props);
-
 		this.state = {
-			sortByStar: false
+			sortByStar: false,
+			sortByPrice: false
 		};
-		this.updateSort = this.updateSort.bind(this);
 	}
 
-	orderForScores(){
-		return [...data].sort(function(a, b){return b.score-a.score;});
+	updateSort = () => {
+		this.setState({
+			sortByPrice: false,
+			sortByStar: !this.state.sortByStar });
+	}
+	updateByPrice = () => {
+		this.setState({
+			sortByStar: false,
+			sortByPrice: !this.state.sortByPrice });
 	}
 
-	updateSort(){
-		this.setState({ sortByStar: !this.state.sortByStar });
+	reorder = () => {
+		if (this.state.sortByPrice) {
+			return [...data].sort(function(a, b){return a.price.range.from-b.price.range.from;});
+		}
+		if (this.state.sortByStar){
+			return [...data].sort(function(a, b){return b.score-a.score;});
+		}
+
 	}
 
 	renderScore(score) {
@@ -32,13 +44,14 @@ export default class CardList extends React.Component {
 	}
 
 	render(){
-		let itemList = this.state.sortByStar ? this.orderForScores() : data;
+		let itemList = this.state.sortByStar || this.state.sortByPrice ? this.reorder() : data;
+
 		return(
 			<Flex directionLg={'column'}>
 				<Flex direction={'row'} justify= {'flex-end'} paddingRight= {'5%'}>
 					<p>Ordenar por:</p>
 					<IconButton onClick={this.updateSort}>★</IconButton>
-					<IconButton>€</IconButton>
+					<IconButton onClick={this.updateByPrice}>€</IconButton>
 				</Flex>
 				{itemList.map((as, i)=><Card key={as.id} assistant={as} score={this.renderScore(as.score)} />)}
 			</Flex>
