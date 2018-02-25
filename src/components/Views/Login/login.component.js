@@ -222,13 +222,13 @@ export default class Login extends React.Component {
 									<a onClick={()=>this.props.history.replace('/')}>Create account</a> or <a onClick={()=>this.props.history.replace('/')}>reset password</a>
 								</AccountOptions>
 
-							</div>
+						</div>
 
-							<div className="form-links">
-								<a onClick={()=>this.props.history.replace('/')}>www.seniors.com</a>
-							</div>
+						<div className="form-links">
+							<a onClick={()=>this.props.history.replace('/')}>www.seniors.com</a>
+						</div>
 
-						</section>
+					</section>
 
 					</Modal>
 				</Wrap>

@@ -1,14 +1,13 @@
 import React from "react";
-import PropTypes from "prop-types";
+import { Badge } from "reactstrap";
 import styled from 'styled-components';
 import {colors} from '../../Styles/Variables';
 import {Flex} from '../../Styles/Flex';
 import {Button} from '../../Styles/Buttons';
 
 export const CardImage = styled.img`
-border: 2px solid ${colors.secondary};
-width: 35%;
-height: 62px;
+width: 25%;
+height: 30%;
 border-radius: 50px;
 `;
 
@@ -32,34 +31,21 @@ margin-top: -20px;
 text-align: center;
 `;
 
-export const Skills = styled.p`
-color: ${colors.secondary};
-font-size: 12px;
-text-align: center;
-background: blue;
-color: #fff;
-display; inline;
-margin-top: -5px;
-margin-bottom: 10px;
-margin-left: 10px;
-margin-right: 10px;
-`;
-
-export const Languages = styled.p`
-color: ${colors.secondary};
-font-size: 12px;
-text-align: center;
-background: red;
-color: #fff;
-display; inline;
-margin-top: -5px;
-margin-bottom: 2px;
-`;
-
 export const Price = styled.p`
 color: ${colors.secondary};
 font-size: 10px;
 text-align: center;
+`;
+
+const SmallCardContainer = Flex.extend`
+justify-content: center;
+  width:80%;
+@media (min-width: 768px) {
+  width: 40%;
+}
+@media (min-width: 1150px) {
+  width: 22%;
+}
 `;
 
 class SmallCard extends React.Component {
@@ -71,16 +57,20 @@ class SmallCard extends React.Component {
 
 	render(){
 		return(
-			<Flex boxWidth={'220px'}  backgroundFlex={'#fff'} directionLg={'column'} paddingBottom={'10px'} paddingTop={'30px'} marginBox={'12px'}>
+			<SmallCardContainer boxWidth={'40%'} backgroundFlex={'#fff'} directionLg={'column'} paddingBottom={'10px'} paddingTop={'30px'} marginBox={'12px'}>
 				<CardImage src={this.props.photo} alt={'assistant-photo'} />
 				<Score>{this.props.score}</Score>
 				<Name>{this.props.name}</Name>
 				<Age>{this.props.age}</Age>
-				<Skills>{this.props.skills}</Skills>
-				<Languages>{this.props.languages}</Languages>
+				<Flex justify={'center'}>
+					{this.props.duties.map((duty) => <Badge color="primary" key={this.props.id+duty+'duty'}>{duty}</Badge>)}
+				</Flex>
+				<Flex justify={'center'}>
+					{this.props.languages.map((lang) => <Badge color="secondary" key={this.props.id+lang+'lang'}>{lang}</Badge>)}
+				</Flex>
 				<Price>{this.props.fromPrice} - {this.props.toPrice} €/h</Price>
-				<Button>Conoceme</Button>
-			</Flex>
+				<Button>Conóceme</Button>
+			</SmallCardContainer>
 		);
 	}
 }

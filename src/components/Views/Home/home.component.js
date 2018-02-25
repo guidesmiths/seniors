@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import "./home.css";
 import styled from 'styled-components';
 import Header from '../../Layout/Header/header.component';
