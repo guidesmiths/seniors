@@ -9,25 +9,26 @@ export default class CardList extends React.Component {
 
 	constructor(props){
 		super(props);
-
 		this.state = {
 			sortByStar: false,
 			sortByPrice: false
 		};
-		this.updateSort = this.updateSort.bind(this);
-		this.updateByPrice = this.updateByPrice.bind(this);
 	}
 
-	updateSort(){
-		this.setState({ sortByStar: !this.state.sortByStar });
+	updateSort = () => {
+		this.setState({
+			sortByPrice: false,
+			sortByStar: !this.state.sortByStar });
 	}
-	updateByPrice(){
-		this.setState({ sortByPrice: !this.state.sortByPrice });
+	updateByPrice = () => {
+		this.setState({
+			sortByStar: false,
+			sortByPrice: !this.state.sortByPrice });
 	}
 
-	reorder(){
+	reorder = () => {
 		if (this.state.sortByPrice) {
-			return [...data].sort(function(a, b){return b.price.range.from-a.price.range.from;});
+			return [...data].sort(function(a, b){return a.price.range.from-b.price.range.from;});
 		}
 		if (this.state.sortByStar){
 			return [...data].sort(function(a, b){return b.score-a.score;});
@@ -43,6 +44,7 @@ export default class CardList extends React.Component {
 
 	render(){
 		let itemList = this.state.sortByStar || this.state.sortByPrice ? this.reorder() : data;
+
 		return(
 			<Flex directionLg={'column'}>
 				<Flex direction={'row'} justify= {'flex-end'} paddingRight= {'5%'}>
