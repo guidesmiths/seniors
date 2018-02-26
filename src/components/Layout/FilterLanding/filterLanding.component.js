@@ -49,10 +49,10 @@ const Select = styled.select `
   color: ${colors.primary};
   -webkit-appearance: none;
   -webkit-border-radius: 0px;
-  margin-bottom:12px;
-  padding-left:14px;
+  margin-bottom: 12px;
+  padding-left: 14px;
   border: 1px solid ${colors.primary};
-  height: 36px;;
+  height: 36px;
   width: 100%;
   @media (min-width: 768px) {
     margin-right:12px;

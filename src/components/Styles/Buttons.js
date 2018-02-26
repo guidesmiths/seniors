@@ -3,8 +3,11 @@ import styled from 'styled-components';
 
 
 export const Button = styled.button`
+padding: 0;
 background: ${colors.secondary};
 border: 2px solid ${colors.secondary};
+font-size: 12px;
+border-radius: 0px;
 width: 128px;
 height: 36px;
 font-weight: 700;
@@ -17,6 +20,7 @@ transition: color ease .6s, background ease .6s;
 &:hover {
 		 color: ${colors.secondary};
 		 background: ${colors.light};
+		 border: 2px solid ${colors.secondary};
 	 }
 @media (min-width: 768px) {
    font-size: 16px;
